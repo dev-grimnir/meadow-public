@@ -19,9 +19,9 @@ deliberate cultivation and management:
   documented in [species.md](species.md).
 - **A written planting and maintenance calendar** — clearing, sowing, and
   seasonal tending (see [plantingplan.md](plantingplan.md)).
-- **Certification and habitat signage** — Monarch Waystation and Xerces Pollinator
-  Habitat certification in progress, with posted on-site signage identifying the
-  planting as a managed, certified pollinator habitat.
+- **Certification and signage (planned)** — Monarch Waystation and Xerces Pollinator
+  Habitat certification will be pursued as the planting establishes and begins
+  flowering, with on-site signage installed at that point.
 
 ## A note on standing stems
 

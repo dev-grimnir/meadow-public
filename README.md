@@ -35,9 +35,10 @@ transparent record of an intentionally cultivated and managed native garden.
   clustered with nectar sources, and a bloom succession from spring through the
   fall monarch migration.
 - **Managed, not neglected** — mapped planting bands, a documented species palette,
-  and a seasonal maintenance calendar, backed by Monarch Waystation / Xerces
-  certification and posted habitat signage. In the pollinator areas, stems are left
-  standing year-round on purpose (overwintering butterflies pupate on them).
+  and a seasonal maintenance calendar, with Monarch Waystation / Xerces certification
+  and on-site habitat signage planned as the planting establishes. In the pollinator
+  areas, stems are left standing year-round on purpose (overwintering butterflies
+  pupate on them).
 
 ## Seed sourcing
 
