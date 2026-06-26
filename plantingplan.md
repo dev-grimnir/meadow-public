@@ -3,7 +3,6 @@
 ## 2026 Status
 
 **Completed:**
-- May 22–31: §302.4 compliance (cutting height)
 - June 8: the south frontage coneflower cotyledons confirmed
 - Mid-June: Bee balm establishing (the south frontage), day lilies flowering (north edge)
 - June: Ironweed survivors confirmed in both patches
@@ -26,7 +25,6 @@
 - Prepare materials: grass clippings, oak leaves, wood chips (ChipDrop or tree service) — weed suppression for paths/cleared ground
 - Cut back two leggy SBB plants on north edge to 12–18" height
 - Clear grass in 18–24" diameter circles around SBB cuts; mulch with clippings
-- Mark future patches with stakes/flags for spring ID
 
 ### Late October–November (after first hard freeze)
 - **Direct-sow priority seeds** (post-frost = reduced mouse predation):
@@ -77,8 +75,6 @@
 ## Spring 2027 (March–May)
 
 ### Late March
-- String-trimmer knock-down on established patches — **road-frontage/optics areas only; NOT west-slope/butterfly territory** (swallowtail chrysalises overwinter on the stems, eclose ~Apr–Jun)
-- Remove flag markers from seeded patches
 - Thin ironweed and aster seedlings where germination is heavy
 - Assess winter survival on 2026 plantings (bee balm, coneflower, SBB)
 
@@ -129,7 +125,6 @@
 
 ## Year 3+ (2028 and beyond)
 
-- Established patches: shift to late-March string-trim only **outside butterfly territory** (west-slope/butterfly zone left standing for overwintering swallowtails)
 - Fall seed collection becomes annual task
 - Genetic selection: save seed from best-performing plants
 - Monitor for naturalizing—heritage seed becomes local ecotype
@@ -142,5 +137,5 @@
 - **Direct-sow window:** Late October–November (post-frost). Earlier sowing = higher mouse loss.
 - **Stratification:** Winter cold naturally breaks seed dormancy. No artificial chilling needed.
 - **Deadheading:** Don't. Seed set and overwintering pollinators take priority.
-- **Spring cutback:** late-March trim only in optics-sensitive frontage; **none in west-slope/butterfly territory** (swallowtails overwinter as chrysalises on the stems, eclose ~Apr–Jun). No fall cleanup either (overwinters monarchs, swallowtails).
+- **none in west-slope/butterfly territory** (swallowtails overwinter as chrysalises on the stems, eclose ~Apr–Jun). No fall cleanup either (overwinters monarchs, swallowtails).
 - **Slope work:** west slope and north edge slopes work best in fall when soil is dry; spring runoff makes work messy.
