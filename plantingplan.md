@@ -23,8 +23,7 @@
 ### Late September–Early October
 - Receive seed orders (Prairie Moon, Sheffield's, Schumacher)
 - Prepare materials: grass clippings, oak leaves, wood chips (ChipDrop or tree service) — weed suppression for paths/cleared ground
-- Cut back two leggy SBB plants on north edge to 12–18" height
-- Clear grass in 18–24" diameter circles around SBB cuts; mulch with clippings
+- Clear competing grass in 18–24" circles around the two leggy north-edge SBB plants to relieve light starvation; mulch with clippings (no cutting — plants left to grow)
 
 ### Late October–November (after first hard freeze)
 - **Direct-sow priority seeds** (post-frost = reduced mouse predation):
@@ -41,7 +40,6 @@
 - Collect ironweed seed from mother plant downhill
 - Direct-sow ironweed in planned patches
 - Do NOT mulch over seeded patches — most seed needs light. Press seed in for soil contact; keep clippings/leaves on paths and cleared-but-unseeded ground
-- Mark all seeded patches clearly (colored flags, stakes with species name)
 
 **Seed density by group (per 3×3 ft patch):**
 
@@ -114,7 +112,7 @@
 - Clear new sod patches (east border likely priority after survey)
 - Direct-sow asters, columbine, mountain mint, yarrow
 - Collect ironweed seed from mother plant
-- Mulch and mark
+- Mulch; document patch locations (photo + sketch, per the fall 2026 protocol)
 
 ### Late October–November
 - Coneflower seed heads ready for collection (optional—self-seeds readily)
@@ -137,5 +135,5 @@
 - **Direct-sow window:** Late October–November (post-frost). Earlier sowing = higher mouse loss.
 - **Stratification:** Winter cold naturally breaks seed dormancy. No artificial chilling needed.
 - **Deadheading:** Don't. Seed set and overwintering pollinators take priority.
-- **none in west-slope/butterfly territory** (swallowtails overwinter as chrysalises on the stems, eclose ~Apr–Jun). No fall cleanup either (overwinters monarchs, swallowtails).
+- **Spring cutback:** None — stems are left standing year-round, in every area, no exceptions. Swallowtails overwinter as chrysalises on the stems and eclose ~Apr–Jun; the standing stems also shelter other beneficial insects and hold seed for native birds through winter. No fall cleanup either (overwinters monarchs, swallowtails).
 - **Slope work:** west slope and north edge slopes work best in fall when soil is dry; spring runoff makes work messy.

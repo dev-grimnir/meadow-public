@@ -135,8 +135,8 @@
 - **Year-one status:** Planted as jugs; survived year 1 but leggy and light-starved
 - **Issue:** Year-old plant flowered (exhausted energy reserves); did NOT survive winter
 - **Lesson:** Individual plants in grass matrix = light competition (etiolation). Year-one bloom = energy wasted on flowers instead of root/rhizome.
-- **Rehabilitation:** Cut to 12–18" height; clear 18–24" grass circle; mulch with clippings
-- **Outlook:** Sacrifice 2027 bloom for 2028+ established clump
+- **Approach:** No cutback. Clear the competing grass around them to relieve the light starvation (the etiolation cause); the plants themselves are left uncut to grow naturally.
+- **Outlook:** Kept as a diagnostic — the takeaway guides future siting, not a rescue of these two.
 - **Takeaway:** Dense patch planting beats individual plants in turf
 
 ---

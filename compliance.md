@@ -13,13 +13,15 @@ and therefore fall within the §302.4 cultivated-garden exemption. The evidence 
 deliberate cultivation and management:
 
 - **A mapped planting layout** — species placed in defined bands by height,
-  juglone tolerance, and butterfly value (see [garden-map.md](garden-map.md) and
-  [garden-design.md](garden-design.md)).
+  juglone tolerance, and butterfly value (see [gardenmap.md](gardenmap.md) and
+  [gardendesign.md](gardendesign.md)).
 - **A defined plant palette** — straight-species, northeast-ecotype natives,
   documented in [species.md](species.md).
 - **A written planting and maintenance calendar** — clearing, sowing, and
-  seasonal tending (see [planting-plan.md](planting-plan.md)).
-- **Certification in progress** — Monarch Waystation and Xerces Pollinator Habitat.
+  seasonal tending (see [plantingplan.md](plantingplan.md)).
+- **Certification and habitat signage** — Monarch Waystation and Xerces Pollinator
+  Habitat certification in progress, with posted on-site signage identifying the
+  planting as a managed, certified pollinator habitat.
 
 ## A note on standing stems
 
@@ -27,6 +29,6 @@ In the pollinator areas, native stems are **left standing through winter and int
 spring on purpose**: overwintering butterflies — swallowtails in particular —
 pupate as chrysalises on the stems and emerge in spring (roughly April–June).
 Cutting those stems down in late winter destroys the next generation. Leaving them
-is a recognized native-garden and conservation practice, not neglect. These standing 
-stems also provide habitat for many other beneficial species of insects as well as 
-seeds for native birds.  This is a crucial winter food source.  
+is a recognized native-garden and conservation practice, not neglect. These standing
+stems also provide habitat for many other beneficial species of insects, as well as
+seed for native birds. This is a crucial winter food source.

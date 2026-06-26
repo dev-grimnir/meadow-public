@@ -41,8 +41,8 @@ Band 2 (middle, 2-4 ft):   SA, M (north)  | SB, BS, PB (south)
 Band 3 (back, 3-6 ft):     MW (north)     | NA (south)
 
 Butterfly territory = north half (above stairs): monarch hosts (BW, MW)
-plus the black swallowtail host (GA). NO spring string-trim here -
-swallowtails overwinter as chrysalises on the stems and eclose ~Apr-Jun.
+plus the black swallowtail host (GA). NO cutback or string-trim here (or
+anywhere) - swallowtails overwinter as chrysalises on the stems and eclose ~Apr-Jun.
 
 Juglone (walnut, SW/south corner): BW and MW are the two juglone-shy
 species, so both sit entirely NORTH. Everything below the stairs is

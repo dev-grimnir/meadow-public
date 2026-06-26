@@ -1,6 +1,6 @@
 # West Slope Map — Analysis Notes
 
-Companion to `garden-map.md`. Records the design review behind the current
+Companion to `gardenmap.md`. Records the design review behind the current
 layout so the reasoning isn't lost between revisions.
 
 Slope orientation reminder:
@@ -69,11 +69,10 @@ bergamot, New England aster — is juglone-tolerant.
 - **Fall fuel = two strong blocks.** New England Aster (27, Band 3 south) +
   Smooth Blue Aster (21, Band 2 north) = 48 positions (~26% of the slope) for
   the late Sept–Oct monarch migration.
-- **NO spring string-trim in butterfly territory.** Swallowtails overwinter as
-  chrysalises on the standing stems and eclose in spring (~Apr–Jun); a
-  late-March knock-down shreds the next generation. Let new growth rise through
-  the old stems; hand-cut and pile loosely only if optics force it, never before
-  early summer. (See `planting-plan.md`.)
+- **NO cutback or string-trim — anywhere, any season.** Stems stand year-round.
+  Swallowtails overwinter as chrysalises on the standing stems and eclose in spring
+  (~Apr–Jun); a late-March knock-down would shred the next generation. Let new
+  growth rise through the old stems. (See `plantingplan.md`.)
 - **Mountain mint** — best nectar magnet here — is a 17-cell block in the center
   of Band 2 north. Expanding it is the one remaining butterfly upgrade, but it
   takes positions from other species (a count change), so it's left open.
@@ -83,7 +82,7 @@ bergamot, New England aster — is juglone-tolerant.
 ## Watch Items
 
 - **Band 3 is a dedicated spreader band.** Milkweed (rhizomatous) north, New
-  England Aster (self-seeder) south. Mow/manage the path (`xx`) edges so they
+  England Aster (self-seeder) south. Manage the path (`xx`) edges so they
   don't march downslope into Band 2 by years 2–3.
 - **Columbine in/near the walnut.** Juglone-tolerant and gets the part shade it
   likes at the corner, but may still go summer-dormant — a brief gap the

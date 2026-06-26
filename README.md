@@ -14,15 +14,15 @@ transparent record of an intentionally cultivated and managed native garden.
 
 ## Contents
 
-- **[compliance.md](compliance.md)** — IPMC §302.4 compliance record and the
-  cultivated-garden exemption.
+- **[compliance.md](compliance.md)** — the IPMC §302.4 cultivated-garden exemption
+  and the standing-stem conservation rationale.
 - **[species.md](species.md)** — the plant palette: natives, bloom times,
   heights, light/soil, and wildlife value.
-- **[garden-map.md](garden-map.md)** — the west-slope planting layout (the first
+- **[gardenmap.md](gardenmap.md)** — the west-slope planting layout (the first
   area being established).
-- **[garden-design.md](garden-design.md)** — the reasoning behind the layout:
+- **[gardendesign.md](gardendesign.md)** — the reasoning behind the layout:
   height tiering, walnut/juglone tolerance, and butterfly optimization.
-- **[planting-plan.md](planting-plan.md)** — the fall direct-sow protocol and a
+- **[plantingplan.md](plantingplan.md)** — the fall direct-sow protocol and a
   season-by-season calendar.
 
 ## Approach in brief
@@ -34,9 +34,10 @@ transparent record of an intentionally cultivated and managed native garden.
 - **Designed for butterflies** — larval host plants (milkweeds, golden alexander)
   clustered with nectar sources, and a bloom succession from spring through the
   fall monarch migration.
-- **Managed, not neglected** — mapped planting bands, marked patches, and a
-  seasonal maintenance calendar. In the pollinator areas, stems are left standing
-  over winter on purpose (overwintering butterflies pupate on them).
+- **Managed, not neglected** — mapped planting bands, a documented species palette,
+  and a seasonal maintenance calendar, backed by Monarch Waystation / Xerces
+  certification and posted habitat signage. In the pollinator areas, stems are left
+  standing year-round on purpose (overwintering butterflies pupate on them).
 
 ## Seed sourcing
 
