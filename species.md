@@ -47,22 +47,6 @@
 - **Notes:** More drought-tolerant than scarlet. Planted west slope south end, mixed with scarlet bee balm. June 2026: establishing.
 - **Status:** Established on west slope
 
-### Common Milkweed (*Asclepias syriaca*)
-
-![Common Milkweed (*Asclepias syriaca*)](images/common-milkweed.jpg)
-
-- **USDA:** 3–9
-- **Bloom:** June–July (pink/mauve flowers, fragrant)
-- **Height:** 3–5 ft
-- **Light:** Full sun
-- **Soil:** Clay-loam, moist; tolerates wet
-- **Spread:** Spreads via rhizomes (can be aggressive)
-- **Juglone:** Marginal tolerance (walnut avoidance recommended)
-- **Wildlife:** Monarch caterpillar host (H); bees (M)
-- **Transplant:** Taproot species = direct-sow preferred; jugs fail
-- **Notes:** 2026 jug attempt (west slope north end) mostly failed — taproot species need direct-sow; the loss was transplant root shock, not a site failure. Direct-sow fall 2026 on **west-slope Band 3 high side, 26 positions** (juglone-free north end) as a monarch-breeding block.
-- **Status:** Jug attempt failed; direct-sow planned fall 2026 (west-slope Band 3 north; wild-collected seed)
-
 ### Butterfly Weed (*Asclepias tuberosa*)
 
 ![Butterfly Weed (*Asclepias tuberosa*)](images/butterfly-weed.jpg)
@@ -94,38 +78,6 @@
 - **Transplant:** Taproot species = direct-sow preferred; jug rate 4/9 dozen
 - **Notes:** the south frontage direct-sown: three ~3×3 ft patches + smaller patch. Cotyledons confirmed June 8. Full clearing approach validated. Winter hardiness excellent.
 - **Status:** Establishing well; validated direct-sow approach
-
-### New England Aster (*Symphyotrichum novae-angliae*)
-
-![New England Aster (*Symphyotrichum novae-angliae*)](images/new-england-aster.jpg)
-
-- **USDA:** 3–8
-- **Bloom:** August–October (deep purple flowers; late fall fuel for monarchs)
-- **Height:** 3–6 ft
-- **Light:** Full sun to part sun
-- **Soil:** Moist to wet; clay-tolerant
-- **Spread:** 18–36" clump
-- **Juglone:** Tolerant (assumed; native to region)
-- **Wildlife:** Monarch fall fueling critical (H); bees (H)
-- **Transplant:** Direct-sow recommended (fall 2026)
-- **Notes:** Fall 2026 direct-sow priority. Tallest, deep purple—visual impact. Monarchs fuel heavily here in migration week (late Sept–early Oct). the south frontage or north edge recommended.
-- **Status:** Planned fall 2026 direct-sow
-
-### Smooth Blue Aster (*Symphyotrichum laeve*)
-
-![Smooth Blue Aster (*Symphyotrichum laeve*)](images/smooth-blue-aster.jpg)
-
-- **USDA:** 3–9
-- **Bloom:** August–October (lighter blue; slightly earlier than New England)
-- **Height:** 2–3 ft
-- **Light:** Full sun to part sun
-- **Soil:** Dry to moist; prefers well-drained
-- **Spread:** 18–24" clump
-- **Juglone:** Tolerant (assumed; native)
-- **Wildlife:** Pollinators (H); monarch fuel (M)
-- **Transplant:** Direct-sow recommended (fall 2026)
-- **Notes:** More drought-tolerant than New England aster; shorter. the south frontage or north edge. Fall 2026 priority.
-- **Status:** Planned fall 2026 direct-sow
 
 ### Ironweed (*Vernonia noveboracensis*)
 
@@ -187,6 +139,9 @@
 - **Status:** Fall 2026 order pending
 
 ### Mountain Mint (*Pycnanthemum virginianum*, Common Mountain Mint)
+
+![Mountain Mint (*Pycnanthemum virginianum*, Common Mountain Mint)](images/mountain-mint.jpg)
+
 - **USDA:** 4–9
 - **Bloom:** June–September (tiny white/pink flowers in dense clusters)
 - **Height:** 2–3 ft
@@ -200,6 +155,9 @@
 - **Status:** Fall 2026 order pending
 
 ### White Yarrow (*Achillea millefolium* ssp. *millefolium*, white form)
+
+![White Yarrow (*Achillea millefolium* ssp. *millefolium*, white form)](images/white-yarrow.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** June–August (white, flat-topped flower clusters)
 - **Height:** 1–2 ft
@@ -213,6 +171,9 @@
 - **Status:** Fall 2026 order pending (Amazon)
 
 ### Wild Columbine (*Aquilegia canadensis*)
+
+![Wild Columbine (*Aquilegia canadensis*)](images/wild-columbine.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** April–May (red-yellow tubular flowers; hummingbird favorite)
 - **Height:** 1–2 ft
@@ -226,6 +187,9 @@
 - **Status:** Fall 2026 order pending
 
 ### Blazing Star / Gay Feather (*Liatris* species—likely *L. spicata* or *L. ligulistylis*)
+
+![Blazing Star / Gay Feather (*Liatris* species—likely *L. spicata* or *L. ligulistylis*)](images/blazing-star.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** June–August (pink-purple spikes)
 - **Height:** 1–3 ft (depends on species)
@@ -238,11 +202,62 @@
 - **Notes:** 2026 jug attempt likely failed. Direct-sow fall 2026. One jug of remaining SBB seed also to be direct-sown.
 - **Status:** Remaining jug seed to direct-sow fall 2026; Prairie Moon order pending for more
 
+### Common Milkweed (*Asclepias syriaca*)
+
+![Common Milkweed (*Asclepias syriaca*)](images/common-milkweed.jpg)
+
+- **USDA:** 3–9
+- **Bloom:** June–July (pink/mauve flowers, fragrant)
+- **Height:** 3–5 ft
+- **Light:** Full sun
+- **Soil:** Clay-loam, moist; tolerates wet
+- **Spread:** Spreads via rhizomes (can be aggressive)
+- **Juglone:** Marginal tolerance (walnut avoidance recommended)
+- **Wildlife:** Monarch caterpillar host (H); bees (M)
+- **Transplant:** Taproot species = direct-sow preferred; jugs fail
+- **Notes:** 2026 jug attempt (west slope north end) mostly failed — taproot species need direct-sow; the loss was transplant root shock, not a site failure. Direct-sow fall 2026 on **west-slope Band 3 high side, 26 positions** (juglone-free north end) as a monarch-breeding block.
+- **Status:** Jug attempt failed; direct-sow planned fall 2026 (west-slope Band 3 north; wild-collected seed)
+
+### New England Aster (*Symphyotrichum novae-angliae*)
+
+![New England Aster (*Symphyotrichum novae-angliae*)](images/new-england-aster.jpg)
+
+- **USDA:** 3–8
+- **Bloom:** August–October (deep purple flowers; late fall fuel for monarchs)
+- **Height:** 3–6 ft
+- **Light:** Full sun to part sun
+- **Soil:** Moist to wet; clay-tolerant
+- **Spread:** 18–36" clump
+- **Juglone:** Tolerant (assumed; native to region)
+- **Wildlife:** Monarch fall fueling critical (H); bees (H)
+- **Transplant:** Direct-sow recommended (fall 2026)
+- **Notes:** Fall 2026 direct-sow priority. Tallest, deep purple—visual impact. Monarchs fuel heavily here in migration week (late Sept–early Oct). the south frontage or north edge recommended.
+- **Status:** Planned fall 2026 direct-sow
+
+### Smooth Blue Aster (*Symphyotrichum laeve*)
+
+![Smooth Blue Aster (*Symphyotrichum laeve*)](images/smooth-blue-aster.jpg)
+
+- **USDA:** 3–9
+- **Bloom:** August–October (lighter blue; slightly earlier than New England)
+- **Height:** 2–3 ft
+- **Light:** Full sun to part sun
+- **Soil:** Dry to moist; prefers well-drained
+- **Spread:** 18–24" clump
+- **Juglone:** Tolerant (assumed; native)
+- **Wildlife:** Pollinators (H); monarch fuel (M)
+- **Transplant:** Direct-sow recommended (fall 2026)
+- **Notes:** More drought-tolerant than New England aster; shorter. the south frontage or north edge. Fall 2026 priority.
+- **Status:** Planned fall 2026 direct-sow
+
 ---
 
 ## Future Candidates (2028+)
 
 ### Spicebush (*Lindera benzoin*)
+
+![Spicebush (*Lindera benzoin*)](images/spicebush.jpg)
+
 - **USDA:** 4–9
 - **Bloom:** April (small yellow flowers before leaves)
 - **Height:** 6–10 ft (shrub/small tree)
@@ -252,17 +267,10 @@
 - **Wildlife:** Spicebush swallowtail caterpillar host (H); migrating songbirds (M)
 - **Notes:** East edge / north edge woodland candidate. Plant from nursery stock (not seed). Schedule 2028 or later (post-survey).
 
-### Pawpaw (*Asimina triloba*)
-- **USDA:** 5–9
-- **Bloom:** April (burgundy flowers, fragrant)
-- **Height:** 15–30 ft
-- **Light:** Part shade to full sun
-- **Soil:** Moist, well-drained
-- **Juglone:** Tolerant ✓
-- **Wildlife:** Zebra swallowtail caterpillar host (H); edible fruit (bonus)
-- **Notes:** Long-term project. East edge candidate. Requires 2+ plants for pollination. Plant from nursery stock.
-
 ### Mountain Laurel (*Kalmia latifolia*)
+
+![Mountain Laurel (*Kalmia latifolia*)](images/mountain-laurel.jpg)
+
 - **USDA:** 4–9
 - **Bloom:** May (white-pink clusters)
 - **Height:** 4–8 ft (mature; 5–7 years from seed)
