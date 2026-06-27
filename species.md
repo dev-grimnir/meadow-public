@@ -16,6 +16,9 @@
 ## Completed 2026 Plantings
 
 ### Scarlet Bee Balm (*Monarda didyma*)
+
+![Scarlet Bee Balm (*Monarda didyma*)](images/scarlet-bee-balm.jpg)
+
 - **USDA:** 4–9
 - **Bloom:** July–September (red flowers)
 - **Height:** 2–3 ft
@@ -29,6 +32,9 @@
 - **Status:** Established on west slope
 
 ### Wild Bergamot (*Monarda fistulosa*)
+
+![Wild Bergamot (*Monarda fistulosa*)](images/wild-bergamot.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** July–August (pink/lavender flowers)
 - **Height:** 2–4 ft
@@ -42,6 +48,9 @@
 - **Status:** Established on west slope
 
 ### Common Milkweed (*Asclepias syriaca*)
+
+![Common Milkweed (*Asclepias syriaca*)](images/common-milkweed.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** June–July (pink/mauve flowers, fragrant)
 - **Height:** 3–5 ft
@@ -55,6 +64,9 @@
 - **Status:** Jug attempt failed; direct-sow planned fall 2026 (west-slope Band 3 north; wild-collected seed)
 
 ### Butterfly Weed (*Asclepias tuberosa*)
+
+![Butterfly Weed (*Asclepias tuberosa*)](images/butterfly-weed.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** May–July (bright orange flowers)
 - **Height:** 1.5–2.5 ft
@@ -68,6 +80,9 @@
 - **Status:** Jug attempt failed; direct-sow planned fall 2026 (west-slope Band 1; wild-collected seed)
 
 ### Purple Coneflower (*Echinacea purpurea*)
+
+![Purple Coneflower (*Echinacea purpurea*)](images/purple-coneflower.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** June–September (pink-purple flowers with orange center)
 - **Height:** 2–4 ft
@@ -81,6 +96,9 @@
 - **Status:** Establishing well; validated direct-sow approach
 
 ### New England Aster (*Symphyotrichum novae-angliae*)
+
+![New England Aster (*Symphyotrichum novae-angliae*)](images/new-england-aster.jpg)
+
 - **USDA:** 3–8
 - **Bloom:** August–October (deep purple flowers; late fall fuel for monarchs)
 - **Height:** 3–6 ft
@@ -94,6 +112,9 @@
 - **Status:** Planned fall 2026 direct-sow
 
 ### Smooth Blue Aster (*Symphyotrichum laeve*)
+
+![Smooth Blue Aster (*Symphyotrichum laeve*)](images/smooth-blue-aster.jpg)
+
 - **USDA:** 3–9
 - **Bloom:** August–October (lighter blue; slightly earlier than New England)
 - **Height:** 2–3 ft
@@ -107,6 +128,9 @@
 - **Status:** Planned fall 2026 direct-sow
 
 ### Ironweed (*Vernonia noveboracensis*)
+
+![Ironweed (*Vernonia noveboracensis*)](images/ironweed.jpg)
+
 - **USDA:** 5–9
 - **Bloom:** August–October (deep purple flowers; airy, open clusters)
 - **Height:** 3–6 ft
@@ -120,6 +144,9 @@
 - **Status:** Genetic source secured; fall 2026 seed collection planned
 
 ### Day Lily (cultivar unknown, likely *Hemerocallis fulva*)
+
+![Day Lily (cultivar unknown, likely *Hemerocallis fulva*)](images/day-lily.jpg)
+
 - **USDA:** 3–10
 - **Bloom:** June–July (varies by cultivar; orange assumed)
 - **Height:** 2–3 ft
@@ -144,6 +171,9 @@
 ## Fall 2026 Direct-Sow Priority Species
 
 ### Golden Alexanders (*Zizia aurea*)
+
+![Golden Alexanders (*Zizia aurea*)](images/golden-alexanders.jpg)
+
 - **USDA:** 4–9
 - **Bloom:** May–June (yellow umbel clusters)
 - **Height:** 1.5–2.5 ft
