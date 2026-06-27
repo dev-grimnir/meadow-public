@@ -1,7 +1,9 @@
 # Repository Guidance
 
-This is a **documentation-only** repository — Markdown notes for a native pollinator
-garden and its IPMC §302.4 compliance record. There is no application code to break.
+This repository is **mostly documentation** — Markdown notes for a native pollinator
+garden and its IPMC §302.4 compliance record — now paired with a small **static GitHub
+Pages front end** (`index.html` renders a sortable table from `data/species.csv`).
+Almost everything here is prose; the only code is that one self-contained static page.
 
 ## Git workflow (standing instructions)
 

@@ -54,7 +54,7 @@ MW - Milkweed
 WY - White Yarrow
 BW - Butterfly Weed
 WC - Wild Columbine
-SB - Scarlett Bee Balm
+SB - Scarlet Bee Balm
 PB - Purple Bee Balm
 NA - New England Aster
 SA - Smooth Blue Aster
