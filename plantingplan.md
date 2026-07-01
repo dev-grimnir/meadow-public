@@ -137,3 +137,110 @@
 - **Deadheading:** Don't. Seed set and overwintering pollinators take priority.
 - **Spring cutback:** None — stems are left standing year-round, in every area, no exceptions. Swallowtails overwinter as chrysalises on the stems and eclose ~Apr–Jun; the standing stems also shelter other beneficial insects and hold seed for native birds through winter. No fall cleanup either (overwinters monarchs, swallowtails).
 - **Slope work:** west slope and north edge slopes work best in fall when soil is dry; spring runoff makes work messy.
+
+---
+
+## Per-Species Status & Field Notes
+
+The by-species planting record (moved here from `species.md`, which is now a
+reference list). The seasonal calendar above is the by-date view of the same work.
+
+### Scarlet Bee Balm — Established (west slope)
+Planted west slope, south end; chosen over bergamot for red flower color. June
+2026: branched, healthy, establishing well. Fibrous roots — jug-then-plant works.
+
+### Purple Bee Balm / Wild Bergamot — Established (west slope)
+Planted west slope, south end, mixed with scarlet bee balm; more drought-tolerant.
+June 2026: establishing.
+
+### Common Milkweed — Jug attempt failed; direct-sow planned fall 2026
+2026 jug attempt (west slope north end) mostly failed — taproot species need
+direct-sow; the loss was transplant root shock, not a site failure. Direct-sow
+fall 2026 on **west-slope Band 3 high side, 26 positions** (juglone-free north
+end) as a monarch-breeding block. Wild-collected seed.
+
+### Butterfly Weed — Jug attempt failed; direct-sow planned fall 2026
+2026 jug attempt (west slope north end) failed — deep-taproot species don't
+transplant (root shock), not a site verdict. Direct-sow is the corrected method.
+**Largest west-slope footprint: 33 positions, Band 1 north** — above the stairs,
+clear of the SW walnut. Wild-collected seed.
+
+### Purple Coneflower — Establishing well (validated direct-sow)
+South frontage direct-sown: three ~3×3 ft patches + a smaller patch. Cotyledons
+confirmed June 8. Full-clearing approach validated. Winter hardiness excellent.
+
+### New England Aster — Planned fall 2026 direct-sow
+Tallest, deep purple — visual impact. Monarchs fuel heavily here in migration
+week (late Sept–early Oct). South frontage or north edge.
+
+### Smooth Blue Aster — Planned fall 2026 direct-sow
+More drought-tolerant than New England aster; shorter. South frontage or north edge.
+
+### Ironweed — Genetic source secured; fall 2026 seed collection planned
+Mother plant (genetic insurance) still standing downhill on the property. Year-old
+seedlings in two patches uphill; survivors confirmed after transplant shock. Seeds
+collected annually from the mother plant. Natural-area plantings, not border.
+
+### Day Lily — Established; June flowering observed
+Divisions from a friend planted north edge a year ago. All 17 survived winter;
+flowering confirmed June 2026. Bridge plantings — establish faster than natives,
+fill space while natives establish. Non-native but well-behaved, not invasive.
+
+### Golden Alexanders — Fall 2026 order pending
+Sourcing: Prairie Moon Nursery (northeast ecotype). **BUY SEED ONLY** — never
+wild-collect Apiaceae (wild parsnip, poison/water hemlock, giant hogweed all look
+similar).
+
+### Mountain Mint — Fall 2026 order pending
+Sourcing: Prairie Moon Nursery. Summer-long pollinator workhorse. Self-sows readily
+(volunteer seedlings expected years 2+). Spreads — place with intent.
+
+### White Yarrow — Fall 2026 order pending (Amazon)
+Sourcing: Organo Republic via Amazon (Prairie Moon doesn't carry it). Straight
+species, white wild form only — no pink/yellow cultivars.
+
+### Wild Columbine — Fall 2026 order pending
+Sourcing: Prairie Moon Nursery. Early spring interest. Suitable for north edge
+(afternoon shade). NOT suitable for the full-sun south frontage.
+
+### Blazing Star — Remaining jug seed to direct-sow fall 2026; more on order
+2026 jug attempt likely failed. Direct-sow fall 2026. One jug of remaining SBB seed
+also to be direct-sown. Prairie Moon order pending for more.
+
+### Spicebush — Future candidate (2028+)
+East edge / north edge woodland candidate. Plant from nursery stock (not seed).
+Schedule 2028 or later (post-survey).
+
+### Mountain Laurel — Seed + medium ordered for 2027 start
+Seed project underway (Sheffield's Seed Company or F.W. Schumacher Co.). Sow fall
+2026, grow 3–5 years in pots, landscape 2030–2031. Requires ericoid mycorrhizal
+inoculation — use soil from an established rhododendron/blueberry patch if
+available; commercial ericaceous inoculant as backup.
+
+---
+
+## Diagnostic Case — Two Leggy Scarlet Bee Balm (north edge)
+
+- Planted as jugs; survived year 1 but leggy and light-starved.
+- Year-old plant flowered (exhausted energy reserves); did NOT survive winter.
+- Lesson: individual plants in a grass matrix = light competition (etiolation);
+  year-one bloom = energy wasted on flowers instead of root/rhizome.
+- Approach: **no cutback** — clear the competing grass around them to relieve the
+  light starvation; the plants themselves are left uncut to grow naturally.
+- Takeaway: dense patch planting beats individual plants in turf. Kept as a
+  diagnostic to guide future siting, not a rescue of these two.
+
+---
+
+## Sourcing Summary
+
+| Source | Best for |
+|--------|----------|
+| Prairie Moon Nursery | Asters, coneflower, blazing star, columbine, golden alexanders, mountain mint, yarrow backup |
+| Organo Republic (Amazon) | White yarrow (only confirmed source) |
+| Sheffield's Seed Company | Mountain laurel seed |
+| F.W. Schumacher Co. | Mountain laurel seed, tree/shrub species |
+
+- Northeast ecotype preferred (Prairie Moon specialty).
+- Order by mid-August for fall 2026 direct-sow (late Oct–Nov window).
+- Test for seed viability if storing past season.

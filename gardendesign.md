@@ -89,3 +89,17 @@ bergamot, New England aster — is juglone-tolerant.
   adjacent yarrow fills.
 - **Mountain mint also spreads** — kept centered in Band 2 north; let it fill
   its block but watch the downhill edge.
+
+---
+
+## Planting Combinations (Tried & Working)
+
+**South-Frontage Success Combo:** Coneflower + Bee balm (direct-sown, full clearing)
+- Establishes well; validates the direct-sow + full-clearing approach.
+- Coneflower provides structure; bee balm fills in horizontally.
+- Both drought-tough for full sun.
+
+**West Slope Combo (South):** Scarlet Bee Balm + Purple Bee Balm / Wild Bergamot (juglone-tolerant)
+- Both fibrous-rooted = container-to-ground transplant OK.
+- June establishment excellent; ready for year-two vigor.
+- Juglone-safe; the walnut cannot suppress them.
