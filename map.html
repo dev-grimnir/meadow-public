@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West-Slope Planting Map — Native Pollinator Garden</title>
+<style>
+  :root{--ink:#22311f;--accent:#3f6b2e;--line:#d9e2d2;--muted:#6b7a61;}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;padding:1.2rem;}
+  h1{font-size:1.5rem;margin:0 0 .2rem;}
+  nav.site{margin:.1rem 0 .6rem;font-size:.9rem;}
+  nav.site a{color:var(--accent);margin-right:.9rem;}
+  p.lede{margin:.2rem 0 .9rem;color:#5a6b50;max-width:70ch;}
+  .frame{border:1px solid var(--line);border-radius:10px;padding:.6rem;overflow-x:auto;}
+  svg{display:block;margin:0 auto;}
+  svg text{font-family:inherit;}
+  .blk{stroke:rgba(34,49,31,.25);stroke-width:1;cursor:pointer;}
+  .blk:hover{stroke:var(--ink);stroke-width:2;}
+  .blk-label{pointer-events:none;font-size:12px;font-weight:600;}
+  .axis{fill:var(--muted);font-size:11px;letter-spacing:.08em;}
+  .bandhead{fill:var(--ink);font-size:13px;font-weight:600;}
+  .bandsub{fill:var(--muted);font-size:11px;}
+  .zone-label{font-size:11px;font-weight:600;}
+  #tip{position:fixed;z-index:10;max-width:270px;background:#fff;border:1px solid var(--line);
+       border-radius:10px;box-shadow:0 6px 20px rgba(34,49,31,.15);padding:.6rem .7rem;display:none;pointer-events:none;}
+  #tip img{width:100%;height:120px;object-fit:cover;border-radius:6px;display:block;margin-bottom:.4rem;background:#eee;}
+  #tip .nm{font-weight:700;} #tip .bt{font-style:italic;color:#43523a;font-size:.85rem;margin-bottom:.25rem;}
+  #tip dl{margin:0;font-size:.82rem;display:grid;grid-template-columns:auto 1fr;gap:.05rem .5rem;}
+  #tip dt{color:var(--muted);} #tip dd{margin:0;}
+  .legend{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:.8rem 0 .2rem;font-size:.85rem;}
+  .legend .chip{display:flex;align-items:center;gap:.35rem;}
+  .legend .sw{width:14px;height:14px;border-radius:4px;border:1px solid rgba(34,49,31,.3);}
+  .notes{font-size:.85rem;color:var(--muted);max-width:75ch;}
+  .notes li{margin:.15rem 0;}
+</style>
+</head>
+<body>
+<h1>West-Slope Planting Map</h1>
+<nav class="site"><a href="index.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="species.md">species.md</a></nav>
+<p class="lede">Schematic of the west-slope layout — blocks are proportional to planting positions and colored by flower color.
+Hover or tap a block for the species. A working approximation for figuring out where plants go (source: <a href="gardenmap.md">gardenmap.md</a>).</p>
+<div class="frame"><svg id="svg" width="980" height="676" role="img" aria-label="Schematic planting map of the west slope"></svg></div>
+<div class="legend" id="legend"></div>
+<ul class="notes">
+  <li>South Band 2 is an interplanted <b>mix</b> — Scarlet Bee Balm, Blazing Star, and a single Purple Bee Balm plant. Blocks show proportions, not exact spots.</li>
+  <li>Hatched area = juglone zone around the black-walnut corner; every species inside it is juglone-tolerant. Dashed outline = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
+</ul>
+<div id="tip" role="tooltip"></div>
+<script>
+function parseCSV(text){const rows=[];let row=[],f='',q=false;for(let i=0;i<text.length;i++){const c=text[i];
+ if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}
+ else{if(c==='"')q=true;else if(c===','){row.push(f);f='';}else if(c==='\n'){row.push(f);rows.push(row);row=[];f='';}else if(c!=='\r')f+=c;}}
+ if(f!==''||row.length){row.push(f);rows.push(row);}return rows;}
+function toObjs(rows){const h=rows.shift().map(s=>s.trim());return rows.filter(r=>r.length>1).map(r=>{const o={};h.forEach((k,i)=>o[k]=r[i]);return o;});}
+function lum(hex){const n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255;return (0.2126*r+0.7152*g+0.0722*b)/255;}
+
+Promise.all([fetch('data/species.csv').then(r=>r.text()),fetch('data/layout.csv').then(r=>r.text())])
+.then(([sTxt,lTxt])=>{
+  const species={}; toObjs(parseCSV(sTxt)).forEach(s=>species[s.common_name]=s);
+  const blocks=toObjs(parseCSV(lTxt)).map(b=>({...b,band:+b.band,order:+b.order,positions:+b.positions}));
+  draw(species,blocks);
+});
+
+function draw(species,blocks){
+  const svg=document.getElementById('svg'), NS='http://www.w3.org/2000/svg';
+  const el=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(parent||svg).appendChild(e);return e;};
+  // geometry: 3 band columns (LOW/road → HIGH), north half above the stairs (13 rows), south below (10 rows)
+  const colW=230, gap=48, x0=88, topY=86, hN=280, stairsH=30, hS=216;
+  const colX=b=>x0+(b-1)*(colW+gap);
+  const stairsY=topY+hN, southY=stairsY+stairsH, botY=southY+hS;
+  const BAND_INFO={1:'front · 1–2.5 ft',2:'middle · 2–4 ft',3:'back · 3–6 ft'};
+
+  // defs: juglone hatch
+  const defs=el('defs',{});
+  const pat=el('pattern',{id:'hatch',width:'8',height:'8',patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);
+  el('rect',{width:8,height:8,fill:'rgba(139,94,60,0.05)'},pat);
+  el('line',{x1:0,y1:0,x2:0,y2:8,stroke:'rgba(139,94,60,0.45)','stroke-width':1.5},pat);
+
+  // butterfly territory (north half) — soft outline behind blocks
+  el('rect',{x:colX(1)-10,y:topY-10,width:3*colW+2*gap+20,height:hN+20,rx:12,
+             fill:'rgba(63,107,46,0.05)',stroke:'rgba(63,107,46,0.55)','stroke-dasharray':'6 5','stroke-width':1.5});
+  const bt=el('text',{x:colX(3)+colW,y:topY-18,'text-anchor':'end',class:'zone-label',fill:'#3f6b2e'});
+  bt.textContent='🦋 butterfly territory — monarch + swallowtail hosts';
+
+  // compass + slope axis
+  const cN=el('text',{x:20,y:34,class:'bandhead'}); cN.textContent='N ↑';
+  const road=el('text',{x:x0-26,y:stairsY-40,class:'axis',transform:`rotate(-90 ${x0-26} ${stairsY-40})`}); road.textContent='ROAD EDGE — LOW';
+  const high=el('text',{x:colX(3)+colW+26,y:stairsY-70,class:'axis',transform:`rotate(90 ${colX(3)+colW+26} ${stairsY-70})`}); high.textContent='HIGH';
+
+  // band headers + totals
+  const totals={};blocks.forEach(b=>totals[b.band]=(totals[b.band]||0)+b.positions);
+  for(let b=1;b<=3;b++){
+    const h1=el('text',{x:colX(b)+colW/2,y:32,'text-anchor':'middle',class:'bandhead'}); h1.textContent='Band '+b;
+    const h2=el('text',{x:colX(b)+colW/2,y:48,'text-anchor':'middle',class:'bandsub'}); h2.textContent=BAND_INFO[b];
+    const h3=el('text',{x:colX(b)+colW/2,y:botY+22,'text-anchor':'middle',class:'bandsub'}); h3.textContent=totals[b]+' positions';
+  }
+
+  // stairs
+  el('rect',{x:colX(1)-10,y:stairsY+4,width:3*colW+2*gap+20,height:stairsH-8,fill:'#dcd9d2',rx:4});
+  const st=el('text',{x:colX(2)+colW/2,y:stairsY+stairsH/2+4,'text-anchor':'middle',class:'axis'}); st.textContent='C O N C R E T E   S T A I R S';
+
+  // blocks
+  const GAP=2, tip=document.getElementById('tip');
+  [['North',topY,hN],['South',southY,hS]].forEach(([half,y0,H])=>{
+    for(let b=1;b<=3;b++){
+      const list=blocks.filter(k=>k.band===b&&k.half===half).sort((p,q)=>p.order-q.order);
+      if(!list.length)continue;
+      const tot=list.reduce((s,k)=>s+k.positions,0), usable=H-GAP*(list.length-1);
+      let y=y0;
+      list.forEach(k=>{
+        const sp=species[k.species]||{}, h=usable*(k.positions/tot), c=sp.bloom_color||'#ccc';
+        const r=el('rect',{x:colX(b),y:y,width:colW,height:Math.max(h,4),rx:4,fill:c,class:'blk'});
+        if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
+        if(h>=17){
+          const t=el('text',{x:colX(b)+colW/2,y:y+h/2+4,'text-anchor':'middle',class:'blk-label',
+                             fill:lum(c)>0.55?'#22311f':'#ffffff'});
+          t.textContent=k.species+' · '+k.positions;
+        }
+        r.addEventListener('mousemove',e=>{
+          tip.style.display='block';
+          tip.innerHTML='<img src="images/'+sp.image+'" alt="">'
+            +'<div class="nm">'+k.species+'</div><div class="bt">'+(sp.botanical_name||'')+'</div>'
+            +'<dl><dt>Here</dt><dd>'+k.positions+' positions · Band '+b+' '+half.toLowerCase()+'</dd>'
+            +'<dt>Bloom</dt><dd>'+(sp.bloom_label||'')+'</dd><dt>Height</dt><dd>'+(sp.height_label||'')+'</dd>'
+            +'<dt>Juglone</dt><dd>'+(sp.juglone||'')+'</dd><dt>Wildlife</dt><dd>'+(sp.wildlife_value||'')
+            +(sp.caterpillar_host&&sp.caterpillar_host!=='—'?' · host: '+sp.caterpillar_host:'')+'</dd></dl>';
+          const w=280,ww=window.innerWidth;
+          tip.style.left=Math.min(e.clientX+14,ww-w-10)+'px';
+          tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';
+        });
+        r.addEventListener('mouseleave',()=>tip.style.display='none');
+        y+=h+GAP;
+      });
+    }
+  });
+
+  // juglone zone: southern ~30% of the south half (walnut at SW corner = bottom-left)
+  const jy=southY+hS*0.70;
+  el('rect',{x:colX(1)-10,y:jy,width:3*colW+2*gap+20,height:botY-jy+10,rx:10,
+             fill:'url(#hatch)',stroke:'rgba(139,94,60,0.6)','stroke-dasharray':'5 4','pointer-events':'none'});
+  const wt=el('text',{x:colX(1)-4,y:botY+40,class:'zone-label',fill:'#7a5230'}); wt.textContent='🌳 black walnut (SW corner) — juglone zone; everything inside is juglone-tolerant';
+
+  // legend (unique species in map order)
+  const seen=new Set(), lg=document.getElementById('legend');
+  blocks.forEach(k=>{ if(seen.has(k.species))return; seen.add(k.species);
+    const sp=species[k.species]||{};
+    const d=document.createElement('span'); d.className='chip';
+    d.innerHTML='<span class="sw" style="background:'+(sp.bloom_color||'#ccc')+'"></span>'+k.species;
+    lg.appendChild(d);
+  });
+}
+</script>
+</body>
+</html>

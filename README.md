@@ -12,6 +12,12 @@ transparent record of an intentionally cultivated and managed native garden.
 > Locations here are described by compass direction and slope (e.g. "west slope,"
 > "south frontage") rather than street address, for privacy.
 
+## Live site (GitHub Pages)
+
+- **[Sortable species table](https://dev-grimnir.github.io/meadow-public/)** — the palette, sortable by any trait
+- **[Bloom calendar](https://dev-grimnir.github.io/meadow-public/calendar.html)** — the nectar relay, spring through the monarch migration
+- **[West-slope planting map](https://dev-grimnir.github.io/meadow-public/map.html)** — interactive schematic of the layout
+
 ## Contents
 
 - **[compliance.md](compliance.md)** — the IPMC §302.4 cultivated-garden exemption
