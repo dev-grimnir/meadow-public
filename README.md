@@ -14,7 +14,9 @@ transparent record of an intentionally cultivated and managed native garden.
 
 ## Live site (GitHub Pages)
 
-- **[Sortable species table](https://dev-grimnir.github.io/meadow-public/)** — the palette, sortable by any trait
+**[dev-grimnir.github.io/meadow-public](https://dev-grimnir.github.io/meadow-public/)** — the project home page, linking to:
+
+- **[Species table](https://dev-grimnir.github.io/meadow-public/table.html)** — the palette, sortable by any trait and filterable (hosts, juglone-safe, natives, blooming now)
 - **[Bloom calendar](https://dev-grimnir.github.io/meadow-public/calendar.html)** — the nectar relay, spring through the monarch migration
 - **[West-slope planting map](https://dev-grimnir.github.io/meadow-public/map.html)** — interactive schematic of the layout
 
