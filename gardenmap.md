@@ -62,3 +62,7 @@ BS - Blazing Star
 
 
 ```
+
+An interactive rendering of this layout:
+[west-slope map](https://dev-grimnir.github.io/meadow-public/map.html). The one-page
+habitat & compliance summary: [habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).

@@ -1,7 +1,10 @@
 # West Slope Map — Analysis Notes
 
 Companion to `gardenmap.md`. Records the design review behind the current
-layout so the reasoning isn't lost between revisions.
+layout so the reasoning isn't lost between revisions. The layout renders live as the
+[west-slope map](https://dev-grimnir.github.io/meadow-public/map.html); the one-page
+habitat & compliance case is the
+[habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).
 
 Slope orientation reminder:
 - **Bands run as contour columns:** Band 1 = LOW/road edge, Band 2 = middle,

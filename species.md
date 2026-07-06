@@ -2,8 +2,10 @@
 
 The garden's plant palette — a reference list, generated from
 [`data/species.csv`](data/species.csv). The sortable, filterable version is the
-GitHub Pages table (`index.html`). Planting **status, timing, sourcing, and field
-notes** live in [`plantingplan.md`](plantingplan.md).
+[live species table](https://dev-grimnir.github.io/meadow-public/table.html), and the
+one-page habitat & compliance summary is the
+[habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html). Planting
+**status, timing, sourcing, and field notes** live in [`plantingplan.md`](plantingplan.md).
 
 ## Legend
 

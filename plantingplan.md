@@ -1,5 +1,9 @@
 # Planting Timeline & Seasonal Tasks
 
+Per-species establishment status also renders live as badges on the
+[species table](https://dev-grimnir.github.io/meadow-public/table.html) and in the
+[habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).
+
 ## 2026 Status
 
 **Completed:**

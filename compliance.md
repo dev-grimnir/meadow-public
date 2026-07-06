@@ -22,6 +22,9 @@ deliberate cultivation and management:
 - **Certification and signage (planned)** — Monarch Waystation and Xerces Pollinator
   Habitat certification will be pursued as the planting establishes and begins
   flowering, with on-site signage installed at that point.
+- **A live habitat record** — this case as a single page, with the habitat figures
+  (host plants, nectar continuity, establishment status) computed from the planting
+  data: [habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).
 
 ## A note on standing stems
 
