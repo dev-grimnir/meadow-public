@@ -32,13 +32,17 @@
   img.thumb{height:54px;width:54px;object-fit:cover;border-radius:6px;display:block;background:#eee;}
   td.safety{color:#8a3b1f;}
   .native-no{color:#9a6a1f;font-weight:600;}
+  .badge{display:inline-block;padding:.08rem .55rem;border-radius:999px;font-size:.78rem;font-weight:600;white-space:nowrap;}
+  .badge.est{background:#e4efdd;color:#2c4d20;}
+  .badge.sow{background:#f7ecd4;color:#7a5b13;}
+  .badge.fut{background:#ececec;color:#5d5d5d;}
   footer{margin-top:1rem;font-size:.85rem;color:#6b7a61;}
   a{color:var(--accent);}
 </style>
 </head>
 <body>
 <h1>🌼 Native Pollinator Garden — Species List</h1>
-<nav class="site"><a href="index.html">Home</a><a href="calendar.html">Bloom calendar</a><a href="map.html">West-slope map</a><a href="species.md">species.md</a></nav>
+<nav class="site"><a href="index.html">Home</a><a href="calendar.html">Bloom calendar</a><a href="map.html">West-slope map</a><a href="habitat.html">Habitat record</a><a href="species.md">species.md</a></nav>
 <p class="lede">North Huntingdon Township, PA — straight-species, northeast-ecotype plantings for monarchs, swallowtails, and native bees.</p>
 <p class="hint">Click any column heading to sort (click again to reverse). A plain-text copy lives in <a href="species.md">species.md</a>.</p>
 <div class="filters" id="filters">
@@ -82,6 +86,7 @@ const COLS=[
   ['Common name','common_name','text',''],
   ['Botanical','botanical_name','text','botanical'],
   ['Native','native','text',''],
+  ['Status','status','srank',''],
   ['Root','root_type','text',''],
   ['Bloom','bloom_label','num','','bloom_start'],
   ['Height','height_label','num','','height_min'],
@@ -94,6 +99,8 @@ const COLS=[
   ['Safety / ID','safety_id','text','wrap-cell safety']
 ];
 const RANK={High:3,Med:2,Low:1};
+const SRANK={'Established':3,'Sowing fall 2026':2,'Future (2028+)':1};
+const badgeClass=v=>v==='Established'?'est':(v&&v.startsWith('Sowing')?'sow':'fut');
 let DATA=[], dir=1, lastCol=-1;
 
 // filter predicates — combinable (AND)
@@ -141,6 +148,7 @@ function buildHead(){
 function sortKey(o,c){
   if(c[2]==='num') return parseFloat(o[c[4]]);
   if(c[2]==='rank') return RANK[o[c[1]]]||0;
+  if(c[2]==='srank') return SRANK[o[c[1]]]||0;
   return (o[c[1]]||'').toLowerCase();
 }
 function sortBy(ci){
@@ -162,6 +170,10 @@ function render(data){
       if(c[1]==='image'){
         const img=document.createElement('img'); img.className='thumb'; img.loading='lazy';
         img.src='images/'+o.image; img.alt=o.common_name||''; td.appendChild(img);
+      } else if(c[1]==='status'){
+        const v=o.status||'';
+        const b=document.createElement('span'); b.className='badge '+badgeClass(v); b.textContent=v;
+        td.appendChild(b);
       } else {
         const v=o[c[1]]||'';
         td.textContent=v;

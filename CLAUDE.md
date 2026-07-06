@@ -2,9 +2,10 @@
 
 This repository is **mostly documentation** — Markdown notes for a native pollinator
 garden and its IPMC §302.4 compliance record — now paired with a small **static GitHub
-Pages front end**: four self-contained pages (`index.html` home page, `table.html`
+Pages front end**: five self-contained pages (`index.html` home page, `table.html`
 sortable/filterable species table, `calendar.html` bloom calendar, `map.html`
-planting-map schematic) rendering from `data/species.csv` and `data/layout.csv`.
+planting-map schematic, `habitat.html` habitat/compliance record) rendering from
+`data/species.csv` and `data/layout.csv`.
 Almost everything here is prose; the only code is those static pages.
 
 ## Git workflow (standing instructions)

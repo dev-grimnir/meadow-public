@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitat Record — Native Pollinator Garden</title>
+<style>
+  :root{--ink:#22311f;--accent:#3f6b2e;--line:#d9e2d2;--muted:#6b7a61;}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;}
+  main{max-width:860px;margin:0 auto;padding:1.3rem 1.2rem 2.2rem;}
+  h1{font-size:1.55rem;margin:.3rem 0 .2rem;}
+  h2{font-size:1.12rem;margin:1.8rem 0 .5rem;color:var(--accent);}
+  nav.site{margin:.1rem 0 .6rem;font-size:.9rem;}
+  nav.site a{color:var(--accent);margin-right:.9rem;}
+  p.lede{margin:.2rem 0 .9rem;color:#5a6b50;max-width:72ch;}
+  a{color:var(--accent);}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin:.9rem 0;}
+  .tile{border:1px solid var(--line);border-radius:12px;padding:.7rem .85rem;}
+  .tile .n{font-size:1.55rem;font-weight:700;line-height:1.2;}
+  .tile .l{font-size:.82rem;color:var(--muted);}
+  table{border-collapse:collapse;width:100%;margin:.4rem 0 .2rem;}
+  th,td{padding:.42rem .55rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.92rem;}
+  th{font-weight:600;background:#eef3ea;}
+  td.botanical{font-style:italic;color:#43523a;}
+  .badge{display:inline-block;padding:.08rem .55rem;border-radius:999px;font-size:.78rem;font-weight:600;white-space:nowrap;}
+  .badge.est{background:#e4efdd;color:#2c4d20;}
+  .badge.sow{background:#f7ecd4;color:#7a5b13;}
+  .badge.fut{background:#ececec;color:#5d5d5d;}
+  .badge.pend{background:#e7edf5;color:#31567e;}
+  .months{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:.5rem 0 .2rem;max-width:640px;}
+  .months .m{border:1px solid var(--line);border-radius:6px;text-align:center;padding:.25rem 0 .3rem;}
+  .months .m .mo{font-size:.68rem;color:var(--muted);letter-spacing:.04em;}
+  .months .m .ct{font-weight:700;font-size:.95rem;}
+  .mini-note{font-size:.82rem;color:var(--muted);margin:.15rem 0 0;}
+  ul.pr{padding-left:1.15rem;margin:.4rem 0;}
+  ul.pr li{margin:.4rem 0;}
+  .footer-note{margin-top:1.8rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);}
+  @media print{
+    nav.site{display:none;}
+    body{font-size:12px;}
+    .tile .n{font-size:1.2rem;}
+    h2{break-after:avoid;}
+    table,.tiles,.months{break-inside:avoid;}
+    a{color:var(--ink);text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Habitat Record</h1>
+<nav class="site"><a href="index.html">Home</a><a href="table.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="map.html">West-slope map</a></nav>
+<p class="lede">The habitat and compliance case for this garden on one page — a ~1-acre residential corner lot in
+North Huntingdon Township, PA, being converted from maintained lawn to an intentionally cultivated native
+pollinator garden. Every figure below is computed live from the same data files that drive the
+<a href="table.html">species table</a>, <a href="calendar.html">bloom calendar</a>, and <a href="map.html">planting map</a>.</p>
+
+<div class="tiles" id="tiles"></div>
+
+<h2>Larval host plants</h2>
+<p>Butterfly reproduction needs host plants, not just nectar. The palette carries hosts for three butterflies,
+with establishment status stated honestly:</p>
+<table id="hosts"><thead><tr><th>Species</th><th>Botanical</th><th>Host for</th><th>Mapped positions</th><th>Status</th></tr></thead><tbody></tbody></table>
+<p class="mini-note">Positions are planting cells on the <a href="map.html">west-slope map</a>; the milkweeds are being
+established by fall 2026 direct-sow after container transplants failed (deep-taproot species — documented in the
+<a href="https://github.com/dev-grimnir/meadow-public/blob/main/plantingplan.md">planting plan</a>).</p>
+
+<h2>Nectar continuity</h2>
+<p>Species in bloom by month — a continuous nectar relay from spring through the fall monarch migration:</p>
+<div class="months" id="months"></div>
+<p class="mini-note">Computed from each species' bloom window; the full picture is the <a href="calendar.html">bloom calendar</a>.
+Late-season coverage (Aug–Oct asters and ironweed) is deliberate: it fuels the monarch migration.</p>
+
+<h2>Management practices</h2>
+<ul class="pr">
+  <li><b>No insecticides or pesticides.</b> Host plants only work if caterpillars survive on them.</li>
+  <li><b>Stems stand year-round, on purpose.</b> Swallowtails overwinter as chrysalises on standing stems and emerge
+      roughly April–June; the stems also shelter beneficial insects and hold winter seed for native birds. This is
+      recognized conservation practice, not neglect.</li>
+  <li><b>Dense patch planting, mapped bands.</b> Species are placed by mature height, juglone tolerance, and butterfly
+      value — see the <a href="map.html">planting map</a> and the
+      <a href="https://github.com/dev-grimnir/meadow-public/blob/main/gardendesign.md">design rationale</a>.</li>
+  <li><b>Fall direct-sow method.</b> Deep-taproot natives are established by post-frost surface sowing with winter
+      stratification, per the <a href="https://github.com/dev-grimnir/meadow-public/blob/main/plantingplan.md">written
+      planting calendar</a>.</li>
+  <li><b>Straight species, northeast ecotype.</b> No cultivars; seed sourced for local adaptation.</li>
+</ul>
+
+<h2>Ordinance compliance — IPMC §302.4</h2>
+<p>North Huntingdon Township enforces IPMC <b>§302.4 (Weeds)</b>, which restricts plant growth over 12 inches but
+<b>exempts cultivated flowers and gardens</b>. This planting is an intentionally cultivated garden within that
+exemption. The evidence of deliberate cultivation and management:</p>
+<ul class="pr">
+  <li><b>A mapped planting layout</b> — defined bands by height, juglone tolerance, and butterfly value
+      (<a href="map.html">interactive map</a>).</li>
+  <li><b>A defined plant palette</b> — every species identified and documented
+      (<a href="table.html">species table</a>).</li>
+  <li><b>A written planting & maintenance calendar</b> — clearing, sowing, and seasonal tending
+      (<a href="https://github.com/dev-grimnir/meadow-public/blob/main/plantingplan.md">planting plan</a>).</li>
+  <li><b>A public, dated record</b> — every change to the garden and its plan is a timestamped commit in
+      <a href="https://github.com/dev-grimnir/meadow-public">the repository</a>.</li>
+</ul>
+<p>The full argument, including the standing-stem rationale, is in
+<a href="https://github.com/dev-grimnir/meadow-public/blob/main/compliance.md">compliance.md</a>.</p>
+
+<h2>Certifications & registrations</h2>
+<table id="ledger"><thead><tr><th>Program</th><th>Backed by</th><th>Status</th></tr></thead><tbody>
+<tr><td>Monarch Waystation (via Westmoreland Pollinator Partners)</td><td>Monarch Watch, Univ. of Kansas; county coalition</td>
+    <td><span class="badge pend">Application planned spring 2027</span> — pending milkweed establishment from the fall 2026 sowing</td></tr>
+<tr><td>Homegrown National Park</td><td>Registry founded by Prof. Doug Tallamy</td>
+    <td><span class="badge pend">Registration planned 2026</span></td></tr>
+<tr><td>Penn State Extension — Pollinator Friendly Garden</td><td>Penn State Master Gardeners</td>
+    <td><span class="badge pend">Under consideration</span></td></tr>
+</tbody></table>
+<p class="mini-note">Statuses here are kept deliberately honest — nothing is claimed before it exists. This page is
+updated as each registration completes.</p>
+
+<div class="footer-note">
+Locations on this site are described by compass direction and slope ("west slope," "south frontage") rather than
+street address, for privacy. Static page — no tracking, no external calls.
+<i>Shared in the public interest — reuse welcome.</i>
+</div>
+</main>
+<script>
+function parseCSV(text){const rows=[];let row=[],f='',q=false;for(let i=0;i<text.length;i++){const c=text[i];
+ if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}
+ else{if(c==='"')q=true;else if(c===','){row.push(f);f='';}else if(c==='\n'){row.push(f);rows.push(row);row=[];f='';}else if(c!=='\r')f+=c;}}
+ if(f!==''||row.length){row.push(f);rows.push(row);}return rows;}
+function toObjs(rows){const h=rows.shift().map(s=>s.trim());return rows.filter(r=>r.length>1).map(r=>{const o={};h.forEach((k,i)=>o[k]=r[i]);return o;});}
+const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const badgeClass=v=>v==='Established'?'est':(v&&v.startsWith('Sowing')?'sow':'fut');
+
+Promise.all([fetch('data/species.csv').then(r=>r.text()),fetch('data/layout.csv').then(r=>r.text())])
+.then(([sTxt,lTxt])=>{
+  const sp=toObjs(parseCSV(sTxt));
+  const layout=toObjs(parseCSV(lTxt));
+  const posBySpecies={}; layout.forEach(b=>posBySpecies[b.species]=(posBySpecies[b.species]||0)+ +b.positions);
+
+  // stat tiles
+  const natives=sp.filter(o=>o.native==='Yes').length;
+  const hosts=sp.filter(o=>(o.caterpillar_host||'—')!=='—');
+  const established=sp.filter(o=>o.status==='Established').length;
+  const minS=Math.min(...sp.map(o=>+o.bloom_start)), maxE=Math.max(...sp.map(o=>+o.bloom_end));
+  const totalPos=layout.reduce((s,b)=>s+ +b.positions,0);
+  const tiles=[[natives+' of '+sp.length,'native species in the palette'],
+               [hosts.length,'caterpillar host plants'],
+               [MO[minS-1]+'–'+MO[maxE-1],'bloom coverage'],
+               [totalPos,'mapped planting positions'],
+               [established,'species established to date']];
+  document.getElementById('tiles').innerHTML=tiles.map(t=>'<div class="tile"><div class="n">'+t[0]+'</div><div class="l">'+t[1]+'</div></div>').join('');
+
+  // host table
+  document.querySelector('#hosts tbody').innerHTML=hosts.map(o=>{
+    const pos=posBySpecies[o.common_name]?posBySpecies[o.common_name]+' positions':'—';
+    return '<tr><td>'+o.common_name+'</td><td class="botanical">'+o.botanical_name+'</td><td>'+o.caterpillar_host
+      +'</td><td>'+pos+'</td><td><span class="badge '+badgeClass(o.status)+'">'+o.status+'</span></td></tr>';
+  }).join('');
+
+  // months in bloom
+  const counts=[]; for(let m=1;m<=12;m++)counts.push(sp.filter(o=>+o.bloom_start<=m&&m<=+o.bloom_end).length);
+  const max=Math.max(...counts);
+  document.getElementById('months').innerHTML=counts.map((c,i)=>{
+    const a=c?(0.12+0.55*(c/max)):0;
+    return '<div class="m" style="background:rgba(63,107,46,'+a.toFixed(2)+')'+(c/max>0.55?';color:#fff':'')+'">'
+      +'<div class="mo"'+(c/max>0.55?' style="color:rgba(255,255,255,.85)"':'')+'>'+MO[i]+'</div><div class="ct">'+(c||'')+'</div></div>';
+  }).join('');
+});
+</script>
+</body>
+</html>
