@@ -19,9 +19,11 @@ deliberate cultivation and management:
   documented in [species.md](species.md).
 - **A written planting and maintenance calendar** — clearing, sowing, and
   seasonal tending (see [plantingplan.md](plantingplan.md)).
-- **Certification and signage (planned)** — Monarch Waystation and Xerces Pollinator
-  Habitat certification will be pursued as the planting establishes and begins
-  flowering, with on-site signage installed at that point.
+- **Certification and signage (planned)** — Monarch Waystation certification will be
+  pursued through **Westmoreland Pollinator Partners** (the county pollinator-habitat
+  coalition; certification issued under Monarch Watch) once the fall-2026 milkweed
+  plantings establish — targeted spring 2027 — with on-site signage installed at
+  that point.
 - **A live habitat record** — this case as a single page, with the habitat figures
   (host plants, nectar continuity, establishment status) computed from the planting
   data: [habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).

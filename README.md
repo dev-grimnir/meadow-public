@@ -4,7 +4,8 @@ Documentation for the conversion of a ~1-acre residential corner lot from
 maintained lawn to native pollinator habitat. The focus is monarch and
 swallowtail butterflies and native bees, with straight-species, northeast-ecotype
 plantings established by fall direct-sowing. The project is pursuing
-**Monarch Waystation** and **Xerces Pollinator Habitat** certification.
+**Monarch Waystation** certification through **Westmoreland Pollinator Partners**,
+the county's pollinator-habitat coalition.
 
 This documentation is shared openly for anyone planning similar habitat, and as a
 transparent record of an intentionally cultivated and managed native garden.
@@ -44,8 +45,9 @@ transparent record of an intentionally cultivated and managed native garden.
   clustered with nectar sources, and a bloom succession from spring through the
   fall monarch migration.
 - **Managed, not neglected** — mapped planting bands, a documented species palette,
-  and a seasonal maintenance calendar, with Monarch Waystation / Xerces certification
-  and on-site habitat signage planned as the planting establishes. In the pollinator
+  and a seasonal maintenance calendar, with Monarch Waystation certification (via
+  Westmoreland Pollinator Partners) and on-site habitat signage planned as the
+  planting establishes. In the pollinator
   areas, stems are left standing year-round on purpose (overwintering butterflies
   pupate on them).
 
