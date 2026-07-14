@@ -44,7 +44,7 @@ transparent record of an intentionally cultivated and managed native garden.
 - **Designed for butterflies** — larval host plants (milkweeds, golden alexander)
   clustered with nectar sources, and a bloom succession from spring through the
   fall monarch migration.
-- **Managed, not neglected** — mapped planting bands, a documented species palette,
+- **Managed, not neglected** — mapped planting beds, a documented species palette,
   and a seasonal maintenance calendar, with Monarch Waystation certification (via
   Westmoreland Pollinator Partners) and on-site habitat signage planned as the
   planting establishes. In the pollinator

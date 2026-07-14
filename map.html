@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>West-Slope Planting Map — Native Pollinator Garden</title>
 <style>
-  :root{--ink:#22311f;--accent:#3f6b2e;--line:#d9e2d2;--muted:#6b7a61;}
+  :root{--ink:#22311f;--accent:#3f6b2e;--line:#d9e2d2;--muted:#6b7a61;--grass:#8aa96b;}
   *{box-sizing:border-box}
   body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;padding:1.2rem;}
   h1{font-size:1.5rem;margin:0 0 .2rem;}
@@ -18,9 +18,11 @@
   .blk{stroke:rgba(34,49,31,.25);stroke-width:1;cursor:pointer;}
   .blk:hover{stroke:var(--ink);stroke-width:2;}
   .blk-label{pointer-events:none;font-size:12px;font-weight:600;}
+  .grass{fill:var(--grass);stroke:#6f8c53;stroke-width:1;}
+  .grass-label{pointer-events:none;fill:#31421f;font-size:10px;letter-spacing:.06em;}
   .axis{fill:var(--muted);font-size:11px;letter-spacing:.08em;}
-  .bandhead{fill:var(--ink);font-size:13px;font-weight:600;}
-  .bandsub{fill:var(--muted);font-size:11px;}
+  .panelhead{fill:var(--ink);font-size:13px;font-weight:600;}
+  .panelsub{fill:var(--muted);font-size:11px;}
   .zone-label{font-size:11px;font-weight:600;}
   #tip{position:fixed;z-index:10;max-width:270px;background:#fff;border:1px solid var(--line);
        border-radius:10px;box-shadow:0 6px 20px rgba(34,49,31,.15);padding:.6rem .7rem;display:none;pointer-events:none;}
@@ -38,13 +40,14 @@
 <body>
 <h1>West-Slope Planting Map</h1>
 <nav class="site"><a href="index.html">Home</a><a href="table.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="habitat.html">Habitat record</a><a href="species.md">species.md</a></nav>
-<p class="lede">Schematic of the west-slope layout — blocks are proportional to planting positions and colored by flower color.
-Hover or tap a block for the species. A working approximation for figuring out where plants go (source: <a href="gardenmap.md">gardenmap.md</a>).</p>
-<div class="frame"><svg id="svg" width="980" height="676" role="img" aria-label="Schematic planting map of the west slope"></svg></div>
+<p class="lede">Schematic of the west-slope layout — the fall line runs from the road edge down to the toe, and
+water is stopped at each 12&Prime; grass contour band (the green strips). Blocks are planting beds, sized by
+measured bed area and colored by flower color; hover or tap for the species. Source: <a href="gardenmap.md">gardenmap.md</a>.</p>
+<div class="frame"><svg id="svg" width="940" height="740" role="img" aria-label="Schematic planting map of the west slope"></svg></div>
 <div class="legend" id="legend"></div>
 <ul class="notes">
-  <li>South Band 2 is an interplanted <b>mix</b> — Scarlet Bee Balm, Blazing Star, and a single Purple Bee Balm plant. Blocks show proportions, not exact spots.</li>
-  <li>Hatched area = juglone zone around the black-walnut corner; every species inside it is juglone-tolerant. Dashed outline = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
+  <li>Green strips = 12&Prime; grass contour bands (road, mid, toe) — a staple-anchored erosion scaffold, left standing until the meadow's roots take over, then removed.</li>
+  <li>Beds are seeded short-in-front (road side) to tall-in-back (toe side). Hatched area = juglone zone around the black-walnut corner; every species there is juglone-tolerant. Dashed outline = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
 </ul>
 <div id="tip" role="tooltip"></div>
 <script>
@@ -58,88 +61,108 @@ function lum(hex){const n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&2
 Promise.all([fetch('data/species.csv').then(r=>r.text()),fetch('data/layout.csv').then(r=>r.text())])
 .then(([sTxt,lTxt])=>{
   const species={}; toObjs(parseCSV(sTxt)).forEach(s=>species[s.common_name]=s);
-  const blocks=toObjs(parseCSV(lTxt)).map(b=>({...b,band:+b.band,order:+b.order,positions:+b.positions}));
+  const blocks=toObjs(parseCSV(lTxt)).map(b=>({...b,order:+b.order,area:+b.area_ft2}));
   draw(species,blocks);
 });
 
 function draw(species,blocks){
   const svg=document.getElementById('svg'), NS='http://www.w3.org/2000/svg';
   const el=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(parent||svg).appendChild(e);return e;};
-  // geometry: 3 band columns (LOW/road → HIGH), north half above the stairs (13 rows), south below (10 rows)
-  const colW=230, gap=48, x0=88, topY=86, hN=280, stairsH=30, hS=216;
-  const colX=b=>x0+(b-1)*(colW+gap);
-  const stairsY=topY+hN, southY=stairsY+stairsH, botY=southY+hS;
-  const BAND_INFO={1:'front · 1–2.5 ft',2:'middle · 2–4 ft',3:'back · 3–6 ft'};
+  const tip=document.getElementById('tip');
 
-  // defs: juglone hatch
+  // geometry
+  const x0=150, CW=760, GH=18, BH=78, GAPX=2;
+  // each panel: sequence of rows top(road)->bottom(toe); grass rows and bed rows
+  const panels=[
+    {half:'North', title:'North half — butterfly', sub:'6–9 ft deep · ~326 ft²',
+     rows:[{grass:'road band'},{bed:'front'},{grass:'mid band'},{bed:'back'},{grass:'toe band'}]},
+    {half:'South', title:'South half — nectar', sub:'8–13 ft deep · ~410 ft²',
+     rows:[{grass:'road band'},{bed:'front'},{bed:'mid'},{grass:'mid band'},{bed:'back'},{grass:'toe band'}]},
+  ];
+
+  // juglone hatch def
   const defs=el('defs',{});
   const pat=el('pattern',{id:'hatch',width:'8',height:'8',patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);
   el('rect',{width:8,height:8,fill:'rgba(139,94,60,0.05)'},pat);
   el('line',{x1:0,y1:0,x2:0,y2:8,stroke:'rgba(139,94,60,0.45)','stroke-width':1.5},pat);
 
-  // butterfly territory (north half) — soft outline behind blocks
-  el('rect',{x:colX(1)-10,y:topY-10,width:3*colW+2*gap+20,height:hN+20,rx:12,
-             fill:'rgba(63,107,46,0.05)',stroke:'rgba(63,107,46,0.55)','stroke-dasharray':'6 5','stroke-width':1.5});
-  const bt=el('text',{x:colX(3)+colW,y:topY-18,'text-anchor':'end',class:'zone-label',fill:'#3f6b2e'});
-  bt.textContent='🦋 butterfly territory — monarch + swallowtail hosts';
+  // top axis: LOW -> HIGH across the width
+  const ax=el('text',{x:x0,y:24,class:'axis'}); ax.textContent='◄ road edge / LOW (short)';
+  const ax2=el('text',{x:x0+CW,y:24,'text-anchor':'end',class:'axis'}); ax2.textContent='toe / HIGH (tall) ►';
+  el('text',{x:20,y:24,class:'panelhead'}).textContent='N ↑';
 
-  // compass + slope axis
-  const cN=el('text',{x:20,y:34,class:'bandhead'}); cN.textContent='N ↑';
-  const road=el('text',{x:x0-26,y:stairsY-40,class:'axis',transform:`rotate(-90 ${x0-26} ${stairsY-40})`}); road.textContent='ROAD EDGE — LOW';
-  const high=el('text',{x:colX(3)+colW+26,y:stairsY-70,class:'axis',transform:`rotate(90 ${colX(3)+colW+26} ${stairsY-70})`}); high.textContent='HIGH';
+  let y=44;
+  panels.forEach(panel=>{
+    // panel header
+    el('text',{x:x0,y:y+2,class:'panelhead'}).textContent=panel.title;
+    el('text',{x:x0+CW,y:y+2,'text-anchor':'end',class:'panelsub'}).textContent=panel.sub;
+    y+=12;
+    const panelTop=y;
 
-  // band headers + totals
-  const totals={};blocks.forEach(b=>totals[b.band]=(totals[b.band]||0)+b.positions);
-  for(let b=1;b<=3;b++){
-    const h1=el('text',{x:colX(b)+colW/2,y:32,'text-anchor':'middle',class:'bandhead'}); h1.textContent='Band '+b;
-    const h2=el('text',{x:colX(b)+colW/2,y:48,'text-anchor':'middle',class:'bandsub'}); h2.textContent=BAND_INFO[b];
-    const h3=el('text',{x:colX(b)+colW/2,y:botY+22,'text-anchor':'middle',class:'bandsub'}); h3.textContent=totals[b]+' positions';
-  }
-
-  // stairs
-  el('rect',{x:colX(1)-10,y:stairsY+4,width:3*colW+2*gap+20,height:stairsH-8,fill:'#dcd9d2',rx:4});
-  const st=el('text',{x:colX(2)+colW/2,y:stairsY+stairsH/2+4,'text-anchor':'middle',class:'axis'}); st.textContent='C O N C R E T E   S T A I R S';
-
-  // blocks
-  const GAP=2, tip=document.getElementById('tip');
-  [['North',topY,hN],['South',southY,hS]].forEach(([half,y0,H])=>{
-    for(let b=1;b<=3;b++){
-      const list=blocks.filter(k=>k.band===b&&k.half===half).sort((p,q)=>p.order-q.order);
-      if(!list.length)continue;
-      const tot=list.reduce((s,k)=>s+k.positions,0), usable=H-GAP*(list.length-1);
-      let y=y0;
-      list.forEach(k=>{
-        const sp=species[k.species]||{}, h=usable*(k.positions/tot), c=sp.bloom_color||'#ccc';
-        const r=el('rect',{x:colX(b),y:y,width:colW,height:Math.max(h,4),rx:4,fill:c,class:'blk'});
-        if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
-        if(h>=17){
-          const t=el('text',{x:colX(b)+colW/2,y:y+h/2+4,'text-anchor':'middle',class:'blk-label',
-                             fill:lum(c)>0.55?'#22311f':'#ffffff'});
-          t.textContent=k.species+' · '+k.positions;
-        }
-        r.addEventListener('mousemove',e=>{
-          tip.style.display='block';
-          tip.innerHTML='<img src="images/'+sp.image+'" alt="">'
-            +'<div class="nm">'+k.species+'</div><div class="bt">'+(sp.botanical_name||'')+'</div>'
-            +'<dl><dt>Here</dt><dd>'+k.positions+' positions · Band '+b+' '+half.toLowerCase()+'</dd>'
-            +'<dt>Bloom</dt><dd>'+(sp.bloom_label||'')+'</dd><dt>Height</dt><dd>'+(sp.height_label||'')+'</dd>'
-            +'<dt>Juglone</dt><dd>'+(sp.juglone||'')+'</dd><dt>Wildlife</dt><dd>'+(sp.wildlife_value||'')
-            +(sp.caterpillar_host&&sp.caterpillar_host!=='—'?' · host: '+sp.caterpillar_host:'')+'</dd></dl>';
-          const w=280,ww=window.innerWidth;
-          tip.style.left=Math.min(e.clientX+14,ww-w-10)+'px';
-          tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';
+    // rows
+    panel.rows.forEach(rw=>{
+      if(rw.grass!==undefined){
+        el('rect',{x:x0,y:y,width:CW,height:GH,rx:3,class:'grass'});
+        const gl=el('text',{x:x0+CW/2,y:y+GH/2+3.5,'text-anchor':'middle',class:'grass-label'});
+        gl.textContent='12″ grass '+rw.grass;
+        y+=GH;
+      } else {
+        const list=blocks.filter(k=>k.half===panel.half&&k.bed===rw.bed).sort((p,q)=>p.order-q.order);
+        const tot=list.reduce((s,k)=>s+k.area,0)||1;
+        const usable=CW-GAPX*(list.length-1);
+        let x=x0;
+        list.forEach(k=>{
+          const sp=species[k.species]||{}, w=usable*(k.area/tot), c=sp.bloom_color||'#ccc';
+          const r=el('rect',{x:x,y:y,width:Math.max(w,3),height:BH,rx:4,fill:c,class:'blk'});
+          if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
+          if(w>=54){
+            const t1=el('text',{x:x+w/2,y:y+BH/2-2,'text-anchor':'middle',class:'blk-label',fill:lum(c)>0.55?'#22311f':'#fff'});
+            t1.textContent=k.species;
+            const t2=el('text',{x:x+w/2,y:y+BH/2+14,'text-anchor':'middle',class:'blk-label',fill:lum(c)>0.55?'#3a4a30':'#eef3ea','font-weight':'400','font-size':'11'});
+            t2.textContent=k.area+' ft²';
+          }
+          r.addEventListener('mousemove',e=>{
+            tip.style.display='block';
+            tip.innerHTML='<img src="images/'+(sp.image||'')+'" alt="">'
+              +'<div class="nm">'+k.species+'</div><div class="bt">'+(sp.botanical_name||'')+'</div>'
+              +'<dl><dt>Here</dt><dd>'+k.area+' ft² · '+panel.half.toLowerCase()+' '+k.bed+' bed</dd>'
+              +'<dt>Bloom</dt><dd>'+(sp.bloom_label||'')+'</dd><dt>Height</dt><dd>'+(sp.height_label||'')+'</dd>'
+              +'<dt>Juglone</dt><dd>'+(sp.juglone||'')+'</dd><dt>Wildlife</dt><dd>'+(sp.wildlife_value||'')
+              +(sp.caterpillar_host&&sp.caterpillar_host!=='—'?' · host: '+sp.caterpillar_host:'')+'</dd></dl>';
+            const w2=280,ww=window.innerWidth;
+            tip.style.left=Math.min(e.clientX+14,ww-w2-10)+'px';
+            tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';
+          });
+          r.addEventListener('mouseleave',()=>tip.style.display='none');
+          x+=w+GAPX;
         });
-        r.addEventListener('mouseleave',()=>tip.style.display='none');
-        y+=h+GAP;
-      });
+        y+=BH;
+      }
+    });
+
+    // butterfly territory outline (north) / juglone zone (south)
+    if(panel.half==='North'){
+      el('rect',{x:x0-8,y:panelTop-4,width:CW+16,height:y-panelTop+8,rx:10,fill:'none',
+                 stroke:'rgba(63,107,46,0.55)','stroke-dasharray':'6 5','stroke-width':1.5,'pointer-events':'none'});
+      el('text',{x:x0+CW,y:y+14,'text-anchor':'end',class:'zone-label',fill:'#3f6b2e'})
+        .textContent='🦋 butterfly territory — monarch + swallowtail hosts';
+    } else {
+      el('rect',{x:x0-8,y:panelTop-4,width:CW+16,height:y-panelTop+8,rx:10,fill:'url(#hatch)',
+                 stroke:'rgba(139,94,60,0.55)','stroke-dasharray':'5 4','stroke-width':1.2,'pointer-events':'none'});
+      el('text',{x:x0-8,y:y+14,class:'zone-label',fill:'#7a5230'})
+        .textContent='🌳 black walnut (SW corner) — juglone zone; everything here is juglone-tolerant';
+    }
+    y+=26;
+
+    // stairs bar after north
+    if(panel.half==='North'){
+      el('rect',{x:x0-8,y:y,width:CW+16,height:24,fill:'#dcd9d2',rx:4});
+      el('text',{x:x0+CW/2,y:y+16,'text-anchor':'middle',class:'axis'}).textContent='C O N C R E T E   S T A I R S';
+      y+=40;
     }
   });
 
-  // juglone zone: southern ~30% of the south half (walnut at SW corner = bottom-left)
-  const jy=southY+hS*0.70;
-  el('rect',{x:colX(1)-10,y:jy,width:3*colW+2*gap+20,height:botY-jy+10,rx:10,
-             fill:'url(#hatch)',stroke:'rgba(139,94,60,0.6)','stroke-dasharray':'5 4','pointer-events':'none'});
-  const wt=el('text',{x:colX(1)-4,y:botY+40,class:'zone-label',fill:'#7a5230'}); wt.textContent='🌳 black walnut (SW corner) — juglone zone; everything inside is juglone-tolerant';
+  svg.setAttribute('height', y+20);
 
   // legend (unique species in map order)
   const seen=new Set(), lg=document.getElementById('legend');

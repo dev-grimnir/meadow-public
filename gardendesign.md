@@ -1,108 +1,82 @@
 # West Slope Map — Analysis Notes
 
-Companion to `gardenmap.md`. Records the design review behind the current
-layout so the reasoning isn't lost between revisions. The layout renders live as the
+Companion to `gardenmap.md`. Records the design behind the current layout. The
+layout renders live as the
 [west-slope map](https://dev-grimnir.github.io/meadow-public/map.html); the one-page
 habitat & compliance case is the
 [habitat record](https://dev-grimnir.github.io/meadow-public/habitat.html).
 
-Slope orientation reminder:
-- **Bands run as contour columns:** Band 1 = LOW/road edge, Band 2 = middle,
-  Band 3 = HIGH point.
-- **Height tiering:** Band 1 shortest (front), Band 3 tallest (back), for the
-  layered look from the road.
-- **Moisture:** Not a real gradient. The whole face is a 45° slope that sheds
-  water, and the level ground at the toe never pools — so Band 1 drains as
-  sharply as the rest. Assign bands by height and juglone tolerance only.
-- **Juglone:** South end only (black walnut at southwest corner).
-  North/north edge end (above the stairs) is juglone-free.
-- **Butterfly territory = the north half** (above the stairs): both monarch
-  larval hosts plus the black swallowtail host live here.
+Supersedes the earlier height-band draft — the design moved to **contour grass
+bands with continuous planting beds**, on ground-measured dimensions.
 
----
+## Measurements (measuring wheel, 2026-07)
 
-## Height Re-Tier (2026-06)
+The slope was walked with a measuring wheel; the wheel follows the surface, so the
+slope angle never enters the math. Each half is a trapezoid:
 
-Every species sits in the band its mature height belongs to. Sorting all eleven
-by height partitions **exactly** into the three band capacities (66 / 68 / 53
-cells), so nothing changed in the seed counts — only which band each occupies:
+| Half | Length (top / lower) | Depth (ends) | Area |
+|------|----------------------|--------------|------|
+| North (butterfly) | 45' / 42' | 6' → 9' | **~326 ft²** |
+| South (nectar) | 38' / 40' | 8' → 13' | **~410 ft²** |
+| **Total face** | | | **~736 ft²** |
 
-| Band | Height | North half (above stairs) | South half (below stairs) |
-|------|--------|---------------------------|---------------------------|
-| 1 (front) | 1–2.5 ft | Golden Alexander, Butterfly Weed | White Yarrow, Wild Columbine |
-| 2 (middle) | 2–4 ft | Smooth Blue Aster, Mountain Mint | Scarlet Bee Balm, Blazing Star, Purple Bee Balm |
-| 3 (back) | 3–6 ft | Common Milkweed | New England Aster |
+The face is a long, shallow ribbon — only 6–13 ft of depth. That's why the north
+half carries two beds, not three tiers (6–9' holds two), and why placement is by
+bed rather than a rigid height band.
 
-Front-to-back now runs short→tall on both halves. (Butterfly weed and milkweed
-held their bands; yarrow and columbine came out of the middle band where they
-were buried; smooth blue aster and the orphan mint went back to the middle.)
+## Method — whole-slope occultation, cut-out grass bands
 
----
+- **Tarp the whole face** (opaque, occultation) through the summer. Grass and the
+  surface weed seedbank die in the dark; the tarp then holds a clean seedbed until
+  sow day. One continuous sheet anchors far better on a steep grade than a scatter
+  of small pieces.
+- **Staple it, don't weight it.** On a steep face weights roll; staples hold — in
+  the field and on every edge, densest along the top edge and every cut.
+- **Grass survives only in cut-out slots.** Everything not a slot becomes bed. Cut
+  each slot a little wider than the band you want and staple both edges on the cut
+  line so the tarp can't creep over the grass.
+- **Sow late Oct–Nov.** Pull the tarp off the beds, rake off the loose dead thatch
+  (leave the killed root mat — it holds soil and rots into the seedbed), press seed
+  in, don't bury (light germinators).
 
-## Golden Alexander → Butterfly Territory (2026-06)
+## Erosion control — 12" contour grass bands
 
-Height-only logic had put GA in the front-south band. But GA is the **black
-swallowtail larval host**, so it belongs where the butterflies are. Swapped GA
-(6) to Band 1 **north** with the monarch hosts; columbine (6) took GA's old
-front-south cells. The swap is count-neutral and juglone-neutral (both species
-tolerate juglone), and it lands columbine at the **walnut corner**, where the
-tree's part shade actually suits it better than open sun.
+The number that governs slope erosion is **bare run length down the fall line**,
+not percent cover — runoff gains energy over distance, so breaking the run kills
+most of it. The retained grass does that as **continuous 12" bands on contour**
+(across the flow). In `gardenmap.md`'s orientation the fall line runs road→toe, so
+a contour band shows as a vertical `G` column running the full slope length.
 
----
+- **Bands only, no down-slope borders.** A border running with the flow intercepts
+  nothing and can channel water into a rill. The only exception is a grassed
+  waterway laid *down* a natural drainage line.
+- **Placement:** road + toe on both halves (the toe band is the essential one; the
+  road band intercepts road runoff). Both halves also carry a mid band — south for
+  its longer 8–13' runs, north by choice.
+- **Temporary scaffold.** Once the meadow roots take over erosion duty (2–3 years),
+  the strips get pulled and planted out. They were never part of the finished meadow.
 
-## Juglone Handling
+## Placement logic
 
-Butterfly Weed (poor tolerance) and Common Milkweed (marginal) are the only two
-juglone-shy species, and both sit **entirely north of the stairs**, clear of the
-walnut. Everything below the stairs — yarrow, columbine, bee balm, blazing star,
-bergamot, New England aster — is juglone-tolerant.
+- **North half = butterfly zone** (juglone-free). Short hosts on the road side
+  (Butterfly Weed, Golden Alexanders — the black-swallowtail host); taller on the
+  toe side (Smooth Blue Aster, Common Milkweed). **Mountain Mint centered** so it
+  spreads outward in every direction; milkweed on the deep end. Both monarch hosts
+  sit here, clear of the walnut — they're the two juglone-shy species.
+- **South half = nectar zone** (walnut/juglone). Yarrow + bee balm + blazing star
+  through summer, **New England Aster** as the fall-fuel back bed toward the deep
+  end. **Columbine at the walnut corner** for the part shade it likes. Everything
+  here tolerates juglone.
+- **Blazing Star is clustered**, not scattered as singletons through the bee balm —
+  a block of spikes is a better nectar target and easier to manage.
+- **No cutback or string-trim on the native stems, any season** — swallowtails
+  overwinter as chrysalises there and eclose ~Apr–Jun. The grass bands can be
+  trimmed; the block stems are left standing.
 
----
+## Watch items
 
-## Butterfly Optimization
-
-- **North half = the butterfly/monarch zone.** Both monarch hosts (Butterfly
-  Weed front, Common Milkweed back) plus the black swallowtail host (Golden
-  Alexander) are clustered here, with a nectar succession layered in: columbine
-  isn't here anymore, but GA (Apr–Jun) → butterfly weed/milkweed (Jun–Jul) →
-  mountain mint (Jun–Sep) → smooth blue aster (Aug–Oct) keeps it fed.
-- **South half = nectar engine.** Yarrow + bee balm + blazing star + bergamot
-  (summer) → New England aster (Aug–Oct), with columbine at the walnut corner
-  for early spring.
-- **Fall fuel = two strong blocks.** New England Aster (27, Band 3 south) +
-  Smooth Blue Aster (21, Band 2 north) = 48 positions (~26% of the slope) for
-  the late Sept–Oct monarch migration.
-- **NO cutback or string-trim — anywhere, any season.** Stems stand year-round.
-  Swallowtails overwinter as chrysalises on the standing stems and eclose in spring
-  (~Apr–Jun); a late-March knock-down would shred the next generation. Let new
-  growth rise through the old stems. (See `plantingplan.md`.)
-- **Mountain mint** — best nectar magnet here — is a 17-cell block in the center
-  of Band 2 north. Expanding it is the one remaining butterfly upgrade, but it
-  takes positions from other species (a count change), so it's left open.
-
----
-
-## Watch Items
-
-- **Band 3 is a dedicated spreader band.** Milkweed (rhizomatous) north, New
-  England Aster (self-seeder) south. Manage the path (`xx`) edges so they
-  don't march downslope into Band 2 by years 2–3.
-- **Columbine in/near the walnut.** Juglone-tolerant and gets the part shade it
-  likes at the corner, but may still go summer-dormant — a brief gap the
+- **Spreaders** (Common Milkweed, Mountain Mint, White Yarrow, New England Aster,
+  bee balm) run into adjacent beds and press on the grass-band edges — edge-trim to
+  hold definition until the meadow closes and the bands come out.
+- **Columbine** may go summer-dormant at the walnut corner — a brief gap the
   adjacent yarrow fills.
-- **Mountain mint also spreads** — kept centered in Band 2 north; let it fill
-  its block but watch the downhill edge.
-
----
-
-## Planting Combinations (Tried & Working)
-
-**South-Frontage Success Combo:** Coneflower + Bee balm (direct-sown, full clearing)
-- Establishes well; validates the direct-sow + full-clearing approach.
-- Coneflower provides structure; bee balm fills in horizontally.
-- Both drought-tough for full sun.
-
-**West Slope Combo (South):** Scarlet Bee Balm + Purple Bee Balm / Wild Bergamot (juglone-tolerant)
-- Both fibrous-rooted = container-to-ground transplant OK.
-- June establishment excellent; ready for year-two vigor.
-- Juglone-safe; the walnut cannot suppress them.

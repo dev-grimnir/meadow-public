@@ -18,9 +18,12 @@ Per-species establishment status also renders live as badges on the
 ## Fall 2026 (September–November)
 
 ### Late August–Early September
-- Identify patches for fall direct-sow on west slope and north edge slopes
-- Clear sod completely from target patches (full removal, not scuff-and-scatter)
-- Stack cleared sod upside-down for compost pile
+- **West slope:** the whole face is tarped (opaque occultation) to kill sod and the
+  surface weed seedbank — staple-anchored, not weighted (a steep grade rolls weights).
+  12" grass contour bands (road/mid/toe) are cut as slots in the tarp for erosion; the
+  tarp stays on the beds until sow day. See [gardenmap.md](gardenmap.md).
+- **Other areas:** clear sod completely from target patches (full removal, not
+  scuff-and-scatter); stack cleared sod upside-down for the compost pile
 - Collect raked grass clippings; stockpile for mulch
 - Gather oak leaves as they fall
 
@@ -54,8 +57,8 @@ Per-species establishment status also renders live as badges on the
 | Large-seeded milkweeds | BW, MW | 2–4 | 18–36 seeds | Strip floss from BW before sowing; crack MW pods |
 | Liatris | Liatris sp. | 4–6 | 35–55 seeds | Germination erratic over 2 years; err high |
 
-- Slope adjustment: err slightly higher density on lower half of each band (more wind exposure at top)
-- Band 1 BW: oversow — most exposed face on the whole slope
+- Slope adjustment: err slightly higher density on the lower half of each bed (more wind exposure at top)
+- West-slope front-bed butterfly weed: oversow — most exposed face on the whole slope
 
 ### Late November–December
 - Document all sown patches: photo + sketch with locations
@@ -160,13 +163,13 @@ June 2026: establishing.
 ### Common Milkweed — Jug attempt failed; direct-sow planned fall 2026
 2026 jug attempt (west slope north end) mostly failed — taproot species need
 direct-sow; the loss was transplant root shock, not a site failure. Direct-sow
-fall 2026 on **west-slope Band 3 high side, 26 positions** (juglone-free north
+fall 2026 in **the west-slope back bed, north half (~35 ft²)** (juglone-free north
 end) as a monarch-breeding block. Wild-collected seed.
 
 ### Butterfly Weed — Jug attempt failed; direct-sow planned fall 2026
 2026 jug attempt (west slope north end) failed — deep-taproot species don't
 transplant (root shock), not a site verdict. Direct-sow is the corrected method.
-**Largest west-slope footprint: 33 positions, Band 1 north** — above the stairs,
+**Largest west-slope footprint: ~70 ft², front bed (north half)** — above the stairs,
 clear of the SW walnut. Wild-collected seed.
 
 ### Purple Coneflower — Establishing well (validated direct-sow)

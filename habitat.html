@@ -60,8 +60,8 @@ pollinator garden. Every figure below is computed live from the same data files 
 <h2>Larval host plants</h2>
 <p>Butterfly reproduction needs host plants, not just nectar. The palette carries hosts for three butterflies,
 with establishment status stated honestly:</p>
-<table id="hosts"><thead><tr><th>Species</th><th>Botanical</th><th>Host for</th><th>Mapped positions</th><th>Status</th></tr></thead><tbody></tbody></table>
-<p class="mini-note">Positions are planting cells on the <a href="map.html">west-slope map</a>; the milkweeds are being
+<table id="hosts"><thead><tr><th>Species</th><th>Botanical</th><th>Host for</th><th>Bed area</th><th>Status</th></tr></thead><tbody></tbody></table>
+<p class="mini-note">Bed areas are measured planting beds on the <a href="map.html">west-slope map</a>; the milkweeds are being
 established by fall 2026 direct-sow after container transplants failed (deep-taproot species — documented in the
 <a href="https://github.com/dev-grimnir/meadow-public/blob/main/plantingplan.md">planting plan</a>).</p>
 
@@ -77,8 +77,8 @@ Late-season coverage (Aug–Oct asters and ironweed) is deliberate: it fuels the
   <li><b>Stems stand year-round, on purpose.</b> Swallowtails overwinter as chrysalises on standing stems and emerge
       roughly April–June; the stems also shelter beneficial insects and hold winter seed for native birds. This is
       recognized conservation practice, not neglect.</li>
-  <li><b>Dense patch planting, mapped bands.</b> Species are placed by mature height, juglone tolerance, and butterfly
-      value — see the <a href="map.html">planting map</a> and the
+  <li><b>Mapped contour-band beds.</b> Species are placed in defined beds by mature height, juglone tolerance, and
+      butterfly value, with 12&Prime; grass contour bands between them for erosion control — see the <a href="map.html">planting map</a> and the
       <a href="https://github.com/dev-grimnir/meadow-public/blob/main/gardendesign.md">design rationale</a>.</li>
   <li><b>Fall direct-sow method.</b> Deep-taproot natives are established by post-frost surface sowing with winter
       stratification, per the <a href="https://github.com/dev-grimnir/meadow-public/blob/main/plantingplan.md">written
@@ -91,7 +91,7 @@ Late-season coverage (Aug–Oct asters and ironweed) is deliberate: it fuels the
 <b>exempts cultivated flowers and gardens</b>. This planting is an intentionally cultivated garden within that
 exemption. The evidence of deliberate cultivation and management:</p>
 <ul class="pr">
-  <li><b>A mapped planting layout</b> — defined bands by height, juglone tolerance, and butterfly value
+  <li><b>A mapped planting layout</b> — defined beds by height, juglone tolerance, and butterfly value
       (<a href="map.html">interactive map</a>).</li>
   <li><b>A defined plant palette</b> — every species identified and documented
       (<a href="table.html">species table</a>).</li>
@@ -134,24 +134,24 @@ Promise.all([fetch('data/species.csv').then(r=>r.text()),fetch('data/layout.csv'
 .then(([sTxt,lTxt])=>{
   const sp=toObjs(parseCSV(sTxt));
   const layout=toObjs(parseCSV(lTxt));
-  const posBySpecies={}; layout.forEach(b=>posBySpecies[b.species]=(posBySpecies[b.species]||0)+ +b.positions);
+  const areaBySpecies={}; layout.forEach(b=>areaBySpecies[b.species]=(areaBySpecies[b.species]||0)+ +b.area_ft2);
 
   // stat tiles
   const natives=sp.filter(o=>o.native==='Yes').length;
   const hosts=sp.filter(o=>(o.caterpillar_host||'—')!=='—');
   const established=sp.filter(o=>o.status==='Established').length;
   const minS=Math.min(...sp.map(o=>+o.bloom_start)), maxE=Math.max(...sp.map(o=>+o.bloom_end));
-  const totalPos=layout.reduce((s,b)=>s+ +b.positions,0);
+  const totalArea=layout.reduce((s,b)=>s+ +b.area_ft2,0);
   const tiles=[[natives+' of '+sp.length,'native species in the palette'],
                [hosts.length,'caterpillar host plants'],
                [MO[minS-1]+'–'+MO[maxE-1],'bloom coverage'],
-               [totalPos,'mapped planting positions'],
+               [totalArea+' ft²','mapped planting beds'],
                [established,'species established to date']];
   document.getElementById('tiles').innerHTML=tiles.map(t=>'<div class="tile"><div class="n">'+t[0]+'</div><div class="l">'+t[1]+'</div></div>').join('');
 
   // host table
   document.querySelector('#hosts tbody').innerHTML=hosts.map(o=>{
-    const pos=posBySpecies[o.common_name]?posBySpecies[o.common_name]+' positions':'—';
+    const pos=areaBySpecies[o.common_name]?areaBySpecies[o.common_name]+' ft²':'—';
     return '<tr><td>'+o.common_name+'</td><td class="botanical">'+o.botanical_name+'</td><td>'+o.caterpillar_host
       +'</td><td>'+pos+'</td><td><span class="badge '+badgeClass(o.status)+'">'+o.status+'</span></td></tr>';
   }).join('');

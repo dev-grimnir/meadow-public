@@ -1,13 +1,12 @@
-band,half,order,species,positions
-1,North,1,Golden Alexanders,6
-1,North,2,Butterfly Weed,33
-1,South,1,White Yarrow,21
-1,South,2,Wild Columbine,6
-2,North,1,Smooth Blue Aster,9
-2,North,2,Mountain Mint,17
-2,North,3,Smooth Blue Aster,12
-2,South,1,Scarlet Bee Balm,22
-2,South,2,Blazing Star,7
-2,South,3,Purple Bee Balm,1
-3,North,1,Common Milkweed,26
-3,South,1,New England Aster,27
+half,bed,order,species,area_ft2
+North,front,1,Butterfly Weed,70
+North,front,2,Golden Alexanders,26
+North,back,1,Smooth Blue Aster,35
+North,back,2,Mountain Mint,26
+North,back,3,Common Milkweed,35
+South,front,1,White Yarrow,49
+South,front,2,Wild Columbine,49
+South,mid,1,Scarlet Bee Balm,59
+South,mid,2,Blazing Star,20
+South,mid,3,Purple Bee Balm,20
+South,back,1,New England Aster,98

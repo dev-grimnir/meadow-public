@@ -1,67 +1,55 @@
 ```text
+        WEST SLOPE — Fall 2026 direct-sow
+        Measured with wheel 2026-07 · whole-slope tarp (occultation) · seeded fall 2026
 
+        <- road/LOW (short) ------------- toe/HIGH (tall) ->
+        G = 12" grass contour band (staple-anchored) · runs the full slope length
+            water flows road -> toe and is stopped at each band
+            bands only — NO down-slope borders (they run with the flow, do nothing)
 
-<- LOW --------------------------HIGH-->
-_______________________________________
-|BAND1     |xx|BAND2     |xx|BAND3     |
-_______________________________________
-| GA GA GA |xx| SA  SA   |xx| MW  MW   |
-| GA GA GA |xx| SA  SA   |xx| MW  MW   |
-| BW BW BW |xx| SA  SA   |xx| MW  MW   |
-| BW BW BW |xx| SA SA SA |xx| MW  MW   |
-| BW BW BW |xx| M  M M M |xx| MW  MW   |
-| BW BW BW |xx| M  M M M |xx| MW  MW   |
-| BW BW BW |xx| M  M  M  |xx| MW  MW   |
-| BW BW BW |xx| M  M  M  |xx| MW  MW   |
-| BW BW BW |xx| M  M  M  |xx| MW  MW   |
-| BW BW BW |xx| SA SA SA |xx| MW  MW   |
-| BW BW BW |xx| SA SA SA |xx| MW  MW   |
-| BW BW BW |xx| SA SA SA |xx| MW  MW   |
-| BW BW BW |xx| SA SA SA |xx| MW  MW   |
-________________________________________
-|           CONCRETE STAIRS            |
-________________________________________
-| WY WY WY |xx| BS SB SB |xx| NA NA NA |
-| WY WY WY |xx| SB BS SB |xx| NA NA NA |
-| WY WY WY |xx| BS SB SB |xx| NA NA NA |
-| WY WY WY |xx| SB SB SB |xx| NA NA NA |
-| WY WY WY |xx| BS SB SB |xx| NA NA NA |
-| WY WY WY |xx| SB SB SB |xx| NA NA NA |
-|_JUGLONE__|xx|_BS SB SB |xx|___LINE___|
-| WY WY WY |xx| BS SB SB |xx| NA NA NA |
-| WC WC WC |xx| PB SB SB |xx| NA NA NA |
-| WC WC WC |xx| BS SB SB |xx| NA NA NA |
-________________________________________
+   _____________________          NORTH HALF — butterfly · 45'/42' · 6-9' deep · ~326 ft2
+   |G| BW |G| SA |G|              bands: road + mid + toe
+   |G| BW |G| SA |G|              front bed short (BW, GA) · back bed tall (SA, MT, MW)
+   |G| BW |G| SA |G|              MINT centered · MW on the deep (stairs) end
+   |G| GA |G| SA |G|              (beds pinch to ~1.5' at the shallow north-edge end)
+   |G| GA |G| MT |G|
+   |G| GA |G| MT |G|
+   |G| BW |G| MT |G|
+   |G| BW |G| MW |G|
+   |G| BW |G| MW |G|
+   |G| BW |G| MW |G|
+   |G| BW |G| MW |G|
+   _____________________
+   |    CONCRETE STAIRS   |
+   _________________________      SOUTH HALF — nectar · 38'/40' · 8-13' deep · ~410 ft2
+   |G| WY | SB |G| NA |G|         bands: road + mid + toe
+   |G| WY | SB |G| NA |G|         front WY/WC · mid SB/BS/PB · back NA (tall)
+   |G| WY | SB |G| NA |G|         WC at the walnut corner (southwest)
+   |G| WY | BS |G| NA |G|         NA on the toe side, toward the deep south end
+   |G| WY | BS |G| NA |G|
+   |G| WC | SB |G| NA |G|
+   |G| WC | SB |G| NA |G|
+   |G| WC | SB |G| NA |G|
+   |G| WC | PB |G| NA |G|
+   |G| WC | PB |G| NA |G|
+   _________________________
 
-Bands run LOW (Band 1, road/front) -> HIGH (Band 3, back).
-Height tiers front-to-back: Band 1 shortest, Band 3 tallest.
+   Grass bands ~249 ft2 · planting beds ~487 ft2  (194 north + 293 south)
 
-Band 1 (front, 1-2.5 ft):  GA, BW (north) | WY, WC (south)
-Band 2 (middle, 2-4 ft):   SA, M (north)  | SB, BS, PB (south)
-Band 3 (back, 3-6 ft):     MW (north)     | NA (south)
-
-Butterfly territory = north half (above stairs): monarch hosts (BW, MW)
-plus the black swallowtail host (GA). NO cutback or string-trim here (or
-anywhere) - swallowtails overwinter as chrysalises on the stems and eclose ~Apr-Jun.
-
-Juglone (walnut, SW/south corner): BW and MW are the two juglone-shy
-species, so both sit entirely NORTH. Everything below the stairs is
-juglone-tolerant. Columbine (WC) takes the walnut corner for part shade.
-
-M - Mint (Pycnanthemum virginianum)
-GA - Golden Alexander
-MW - Milkweed
-WY - White Yarrow
-BW - Butterfly Weed
-WC - Wild Columbine
-SB - Scarlet Bee Balm
-PB - Purple Bee Balm
-NA - New England Aster
-SA - Smooth Blue Aster
-BS - Blazing Star
-
-
+   G   12" grass contour band, staple-anchored (erosion scaffold; temporary)
+   BW  Butterfly Weed    GA  Golden Alexanders  SA  Smooth Blue Aster
+   MT  Mountain Mint     MW  Common Milkweed    WY  White Yarrow
+   WC  Wild Columbine    SB  Scarlet Bee Balm   BS  Blazing Star
+   PB  Purple Bee Balm   NA  New England Aster
 ```
+
+Bands run **across** the fall line: water flows from the road edge down to the
+toe and is stopped at each 12" grass contour band. The bands (road + mid + toe)
+are a temporary erosion scaffold — staple-anchored strips of living grass left in
+a whole-slope tarp — that come out once the meadow's own roots take over. The
+planting **beds** between them are seeded short-in-front (road side) to tall-in-back
+(toe side); mountain mint sits centered in the north to spread outward, and wild
+columbine takes the walnut corner for its part shade.
 
 An interactive rendering of this layout:
 [west-slope map](https://dev-grimnir.github.io/meadow-public/map.html). The one-page

@@ -12,7 +12,7 @@ The plantings here are an **intentionally cultivated native pollinator garden**,
 and therefore fall within the §302.4 cultivated-garden exemption. The evidence of
 deliberate cultivation and management:
 
-- **A mapped planting layout** — species placed in defined bands by height,
+- **A mapped planting layout** — species placed in defined beds by height,
   juglone tolerance, and butterfly value (see [gardenmap.md](gardenmap.md) and
   [gardendesign.md](gardendesign.md)).
 - **A defined plant palette** — straight-species, northeast-ecotype natives,
