@@ -57,9 +57,15 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 - **Scalp the grass short first** and rake off the heavy clippings — tall grass tents the
   plastic off the soil into a domed air pocket that catches wind, ponds water, and won't
   make the contact that kills the sod. (Learned the hard way on the NW half.)
-- Tarp the whole bed 3', opaque, to kill the sod and the surface weed seedbank.
+- Tarp the whole bed with opaque plastic (3' roll here) to kill the sod and the surface
+  weed seedbank. **Buy the plastic ~1 ft wider than the killed strip** — the extra is your
+  staple margin and the material to fold or patch the corners; a roll the same width as
+  the bed leaves nothing to work with. (With the 3' roll: keep the killed strip ~2.5' and
+  ~3" of margin each side.)
 - **Staple, never weight** — 45° grade, weights roll. **Staple the field on a staggered
-  ~2–3 ft grid, not just the edges** — edge-only lets the middle balloon.
+  ~2–3 ft grid, not just the edges** — edge-only lets the middle balloon. **Double the
+  corners** — fold the corner over, or patch it with an offcut, and staple through the
+  doubled ply; corners lift first, the uphill ones worst.
 - Leave the tarp on the beds until sow day.
 - **Sow day:** pull the tarp, rake off the loose dead thatch (leave the killed root
   mat — it holds soil), press seed in, don't bury (light germinators). No jute needed
