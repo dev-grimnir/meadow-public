@@ -45,15 +45,21 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 
 ## Current state (2026-07)
 
-- **North half / NW (butterfly zone):** ~half tarped. Ran out of staples mid-job.
+- **North half / NW (butterfly zone):** first tarp **ballooned** over uncut grass
+  (edge-only staples) — being pulled up, grass **scalped**, and re-laid with staggered
+  field staples. Plastic + staples reusable.
 - **South half / SW (nectar / walnut zone):** not started. Plastic + staples on hand.
 - Design and measurements are locked (see `gardenmap.md`). **Not yet sown** — sowing
   is late Oct–Nov, after the tarp comes off the beds.
 
 ## Method — occultation → contour-band beds
 
+- **Scalp the grass short first** and rake off the heavy clippings — tall grass tents the
+  plastic off the soil into a domed air pocket that catches wind, ponds water, and won't
+  make the contact that kills the sod. (Learned the hard way on the NW half.)
 - Tarp the whole bed 3', opaque, to kill the sod and the surface weed seedbank.
-- **Staple, never weight** — 45° grade, weights roll.
+- **Staple, never weight** — 45° grade, weights roll. **Staple the field on a staggered
+  ~2–3 ft grid, not just the edges** — edge-only lets the middle balloon.
 - Leave the tarp on the beds until sow day.
 - **Sow day:** pull the tarp, rake off the loose dead thatch (leave the killed root
   mat — it holds soil), press seed in, don't bury (light germinators). No jute needed
