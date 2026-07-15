@@ -13,9 +13,8 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 
 ## Method — occultation → contour-band beds
 
-- Tarp the whole face, opaque, to kill the sod and the surface weed seedbank.
+- Tarp the whole bed 3', opaque, to kill the sod and the surface weed seedbank.
 - **Staple, never weight** — 45° grade, weights roll.
-- Cut 12" grass contour bands (road / mid / toe) as gaps; the grass stays alive there.
 - Leave the tarp on the beds until sow day.
 - **Sow day:** pull the tarp, rake off the loose dead thatch (leave the killed root
   mat — it holds soil), press seed in, don't bury (light germinators). No jute needed
@@ -53,13 +52,3 @@ the plastic goes down**, per clump:
   the standing seed heads: a partial check on its spread, plus winter bird food.
 - The grass bands are a **temporary erosion scaffold** — pulled once the meadow's own
   roots take over erosion duty (2–3 years), then those strips get planted out.
-
-## Sourcing notes (learned the hard way)
-
-- **Staples:** buy 6" 11-gauge sod staples in **bulk** (500–1,000 ct, ~$0.10–0.20 ea),
-  not the ~$0.78/ea garden-center packs. Densest on the top edge and every band-slot
-  edge; the field grid can be sparse (3–4 ft).
-- **Plastic:** a **3-ft-wide roll** (black woven landscape fabric) = one strip per bed,
-  unrolled down the ~40' length. SW half needs ~120' (3 beds × 40'); **150' bought**
-  (covers it with margin).
-- Leftover plastic and staples carry to the north half and the later border tarping.
