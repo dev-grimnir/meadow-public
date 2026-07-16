@@ -18,6 +18,7 @@ one-page habitat & compliance summary is the
 - **Spread:** Horizontal spread or clump diameter at maturity
 - **Juglone:** Black-walnut allelopathy tolerance
 - **Wildlife:** Pollinator/wildlife value (High / Med / Low)
+- **Sow rate:** Fall direct-sow seeding rate (seeds/ft²), the middle of the self-thinning plateau — dense enough to saturate under losses, not so dense it crowds. Low-germination species (milkweeds, butterfly weed, blazing star) are set higher on purpose. — = established by transplant or nursery stock, not sown by area.
 - **Host:** Caterpillar host role, where applicable
 - **Safety / ID:** Identification or handling cautions
 
@@ -36,6 +37,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 12–18 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 8–10/ft² (erratic germ over 2 years — sow high)
 
 ### Butterfly Weed (*Asclepias tuberosa*)
 
@@ -50,6 +52,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 12–18 in
 - **Juglone:** Poor
 - **Wildlife:** High
+- **Sow rate:** 6–8/ft² (poor germ observed; clumper, won't fill by spread)
 - **Host:** Monarch
 
 ### Common Milkweed (*Asclepias syriaca*)
@@ -65,6 +68,7 @@ one-page habitat & compliance summary is the
 - **Spread:** Rhizomatous (aggressive)
 - **Juglone:** Marginal
 - **Wildlife:** High
+- **Sow rate:** 4–6/ft² (poor germ observed; spreads once established)
 - **Host:** Monarch
 
 ### Day Lily (*Hemerocallis fulva*, likely)
@@ -80,6 +84,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 24–36 in
 - **Juglone:** Tolerant
 - **Wildlife:** Low
+- **Sow rate:** — (transplant / division, not sown)
 
 ### Golden Alexanders (*Zizia aurea*)
 
@@ -94,6 +99,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 12–18 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 5–8/ft² (medium seed, 12–18" clump)
 - **Host:** Black swallowtail
 - **⚠ Safety / ID:** BUY SEED ONLY — Apiaceae look-alikes (wild parsnip, poison/water hemlock, giant hogweed); never wild-collect
 
@@ -110,6 +116,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 24–36 in
 - **Juglone:** Tolerant
 - **Wildlife:** Med
+- **Sow rate:** 5–6/ft² (tall, wide clump — fewer needed)
 
 ### Mountain Laurel (*Kalmia latifolia*)
 
@@ -123,6 +130,7 @@ one-page habitat & compliance summary is the
 - **Soil:** Acidic, well-drained; ericaceous
 - **Juglone:** Tolerant
 - **Wildlife:** Med
+- **Sow rate:** — (potted from seed; not sown by area)
 - **Safety / ID:** Needs ericoid mycorrhizal inoculation
 
 ### Mountain Mint (*Pycnanthemum virginianum*)
@@ -138,6 +146,7 @@ one-page habitat & compliance summary is the
 - **Spread:** Rhizomatous; 24–36 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 10–12/ft² (rhizome spreader — modest rate saturates)
 
 ### New England Aster (*Symphyotrichum novae-angliae*)
 
@@ -152,6 +161,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 18–36 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 8–10/ft² (biggest plant — fewest per ft²)
 
 ### Purple Bee Balm (*Monarda fistulosa*)
 
@@ -166,6 +176,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 18–30 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 12–15/ft² (clump, good germ)
 
 ### Purple Coneflower (*Echinacea purpurea*)
 
@@ -180,6 +191,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 12–24 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 6–8/ft² (taproot, 12–24" clump)
 
 ### Scarlet Bee Balm (*Monarda didyma*)
 
@@ -194,6 +206,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 18–24 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 12–15/ft² (clump, good germ)
 
 ### Smooth Blue Aster (*Symphyotrichum laeve*)
 
@@ -208,6 +221,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 18–24 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 10–12/ft² (18–24" clump)
 
 ### Spicebush (*Lindera benzoin*)
 
@@ -221,6 +235,7 @@ one-page habitat & compliance summary is the
 - **Soil:** Moist, well-drained
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** — (nursery stock; not sown by area)
 - **Host:** Spicebush swallowtail
 
 ### White Yarrow (*Achillea millefolium* ssp. *millefolium*)
@@ -236,6 +251,7 @@ one-page habitat & compliance summary is the
 - **Spread:** 18–24 in
 - **Juglone:** Tolerant
 - **Wildlife:** Med
+- **Sow rate:** 12–15/ft² (mat-former, tiny seed, fills)
 - **Safety / ID:** White wild form only — avoid pink/yellow cultivars
 
 ### Wild Columbine (*Aquilegia canadensis*)
@@ -251,3 +267,4 @@ one-page habitat & compliance summary is the
 - **Spread:** 12–18 in
 - **Juglone:** Tolerant
 - **Wildlife:** High
+- **Sow rate:** 6–8/ft² (medium seed, self-seeds in)
