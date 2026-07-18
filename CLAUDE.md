@@ -45,9 +45,11 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 
 ## Current state (2026-07)
 
-- **North half / NW (butterfly zone):** first tarp **ballooned** over uncut grass
-  (edge-only staples) — being pulled up, grass **scalped**, and re-laid with staggered
-  field staples. Plastic + staples reusable.
+- **North half / NW (butterfly zone):** re-laid with the corrected method — scalp →
+  flat → staggered field staples, grass band scalped down the middle. Sits in contact,
+  no doming. **Most of the north half tarped; ~28% of the whole west slope done.**
+  (First attempt ballooned over uncut grass with edge-only staples — that's the lesson
+  logged in Method below.)
 - **South half / SW (nectar / walnut zone):** not started. Plastic + staples on hand.
 - Design and measurements are locked (see `gardenmap.md`). **Not yet sown** — sowing
   is late Oct–Nov, after the tarp comes off the beds.
