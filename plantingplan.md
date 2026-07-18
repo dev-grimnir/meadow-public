@@ -10,8 +10,17 @@ Per-species establishment status also renders live as badges on the
 - June 8: the south frontage coneflower cotyledons confirmed
 - Mid-June: Bee balm establishing (the south frontage), day lilies flowering (north edge)
 - June: Ironweed survivors confirmed in both patches
+- **July 18: north half (NW / butterfly zone) tarped down** — occultation started ahead of
+  the fall schedule. Re-laid with the corrected method (scalp → flat → staggered field
+  staples, grass band scalped down the middle); both strips in contact, no doming. Tarp
+  stays on the beds until sow day.
 
-**Active:** the south frontage coneflower patches establishing; west slope bee balm growing
+![West slope, north half tarped down — two occultation strips run down the 45° grade with
+a scalped grass contour band between them, field-stapled on a staggered grid to hold the
+plastic flat against the sod (2026-07-18).](images/west-slope-north-tarped-2026-07-18.jpg)
+
+**Active:** the south frontage coneflower patches establishing; west slope bee balm growing;
+**south half (SW / nectar–walnut zone) still to scalp** before it can be tarped
 
 ---
 
