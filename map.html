@@ -35,6 +35,10 @@
   .legend .sw{width:14px;height:14px;border-radius:4px;border:1px solid rgba(34,49,31,.3);}
   .notes{font-size:.85rem;color:var(--muted);max-width:75ch;}
   .notes li{margin:.15rem 0;}
+  figure.progress{margin:1.4rem 0 .2rem;max-width:520px;}
+  figure.progress img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;background:#eee;}
+  figure.progress figcaption{font-size:.82rem;color:var(--muted);margin-top:.4rem;line-height:1.45;}
+  figure.progress .when{font-weight:600;color:var(--accent);}
 </style>
 </head>
 <body>
@@ -49,6 +53,14 @@ measured bed area and colored by flower color; hover or tap for the species. Sou
   <li>Green strips = 12&Prime; grass contour bands (road, mid, toe) — a staple-anchored erosion scaffold, left standing until the meadow's roots take over, then removed.</li>
   <li>Beds are seeded short-in-front (road side) to tall-in-back (toe side). Hatched area = juglone zone around the black-walnut corner; every species there is juglone-tolerant. Dashed outline = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
 </ul>
+<figure class="progress">
+  <img src="images/west-slope-north-tarped-2026-07-18.jpg"
+       alt="The north half of the west slope under black-plastic occultation — two tarped bed strips run down the grade with a scalped grass contour band between them, held flat by staggered field staples.">
+  <figcaption><span class="when">2026-07-18 — north half tarped down.</span> The butterfly-zone
+  beds under opaque-plastic occultation to kill the sod and surface weed seedbank, with the scalped
+  grass contour band left between the strips. Staple-anchored on a staggered grid (a 45° grade rolls
+  weights); the tarp stays on until fall sow day. The south half is still to be scalped.</figcaption>
+</figure>
 <div id="tip" role="tooltip"></div>
 <script>
 function parseCSV(text){const rows=[];let row=[],f='',q=false;for(let i=0;i<text.length;i++){const c=text[i];
