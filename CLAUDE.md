@@ -45,12 +45,14 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 
 ## Current state (2026-07)
 
-- **North half / NW (butterfly zone):** re-laid with the corrected method — scalp →
-  flat → staggered field staples, grass band scalped down the middle. Sits in contact,
-  no doming. **Most of the north half tarped; ~28% of the whole west slope done.**
-  (First attempt ballooned over uncut grass with edge-only staples — that's the lesson
-  logged in Method below.)
-- **South half / SW (nectar / walnut zone):** not started. Plastic + staples on hand.
+- **North half / NW (butterfly zone):** **tarped down (2026-07-18).** Re-laid with the
+  corrected method — scalp → flat → staggered field staples, grass band scalped down the
+  middle. Both strips sit in contact, no doming. Watch the uphill corners after the first
+  windy day, and a couple of slight tents near the strip tops (bit of thatch left under)
+  — flatten with extra staples if easy. (First attempt ballooned over uncut grass with
+  edge-only staples — that's the lesson logged in Method below.)
+- **South half / SW (nectar / walnut zone):** not started — **still need to scalp** the
+  south slope before tarping. Plastic + staples on hand.
 - Design and measurements are locked (see `gardenmap.md`). **Not yet sown** — sowing
   is late Oct–Nov, after the tarp comes off the beds.
 
@@ -84,17 +86,21 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
   Back (tall): New England Aster. ~410 ft².
 - Beds ~487 ft² total; grass bands ~249 ft².
 
-## Open decision — PLASTIC DAY, not sow day
+## Decision (settled 2026-07-18) — SPARE the established bee balm
 
-Established **bee balm + bergamot are already spread across the slope**, including
-where the New England Aster bed goes. The tarp kills them, so the call is made **when
-the plastic goes down**, per clump:
+Established **bee balm + bergamot are already spread across the slope**, including where
+the New England Aster bed goes. **Call made: spare the established plants — especially
+the Scarlet Bee Balm (SBB)** — do not tarp over them. They're established, and they were
+planted with the kids; they stay. On plastic day, **cut the tarp around each clump** and
+keep it as an anchor. The New England Aster bed becomes a **bee-balm / aster mix** — good
+habitat, stacks summer + fall bloom (and the standing-rule spring aster-pull below now
+applies to keeping that mix in balance).
 
-- **Spare** — cut the tarp around the clump, keep it as an established anchor (that
-  bed becomes a bee-balm / aster mix — good habitat, stacks summer + fall bloom).
+Options not taken, kept for the record:
 - **Move** — bee balm transplants well (fibrous roots); dig/divide and consolidate the
-  clumps out of the seedbed, then tarp clean.
-- **Sacrifice** — tarp over and resow; only for thin or mildewed clumps.
+  clumps out of the seedbed, then tarp clean. (Not doing this — leaving them in place.)
+- **Sacrifice** — tarp over and resow; only for thin or mildewed clumps. Reserve for any
+  thin/mildewed clump not worth sparing.
 
 ## Standing rules / long-term
 
