@@ -111,3 +111,19 @@ Options not taken, kept for the record:
   the standing seed heads: a partial check on its spread, plus winter bird food.
 - The grass bands are a **temporary erosion scaffold** — pulled once the meadow's own
   roots take over erosion duty (2–3 years), then those strips get planted out.
+
+## ASCII map convention (standing — don't improvise a new one)
+
+Draw **every** ASCII map of the slope in the `gardenmap.md` template, keeping its
+orientation. Do not invent a different axis (e.g. road-on-the-right, compass-rotated):
+
+- **Orientation:** `<- road/LOW (short) ----------- toe/HIGH (tall) ->` — **road on the
+  LEFT, toe on the RIGHT**, fall line horizontal, water flows road → toe (left → right).
+  `LOW`/`HIGH` = plant height (short/tall), not ground elevation. **North is up:** north
+  half drawn above south half; within a half, rows run top → bottom = north end → south end.
+- **Grass contour bands** = the vertical `|G|` columns between bed columns (they run the
+  full slope length, across the fall line). Beds are two-letter codes; always include the
+  code legend (G, BW, GA, SA, MT, MW, WY, WC, SB, BS, PB, NA).
+- The interactive `map.html` should render this **same** orientation. It is currently
+  drawn 90° rotated from the template (fall line vertical, road at top) — that is the
+  known map bug to fix.
