@@ -75,9 +75,9 @@ function draw(species,blocks){
   // Orientation (matches gardenmap.md):
   //   X, left -> right = road (LOW/short) -> toe (HIGH/tall) — the fall line
   //   Y, top -> bottom = north -> south — the contour (north up)
-  const FTX=42;            // px per foot along the fall line (road -> toe)
   const FTY=8;             // px per foot along the contour (north -> south)
-  const GBW=1;            // grass contour band width, feet
+  const CONTENTW=300;      // road->toe width per half — both halves drawn ~equal width
+  const GBpx=34;           // 12" grass contour band, px
   const x0=70, y0=64;      // left / top offset
 
   const panels=[
@@ -97,11 +97,17 @@ function draw(species,blocks){
 
   panels.forEach(panel=>{
     const panelH=panel.len*FTY, panelTop=y;
+    // bed depths (road->toe) so both halves fill the same overall width
+    const bedDepth={}; let totDepth=0, nG=0;
+    panel.cols.forEach(c=>{ if(c.grass!==undefined){nG++;return;}
+      const a=blocks.filter(k=>k.half===panel.half&&k.bed===c.bed).reduce((s,k)=>s+k.area,0);
+      bedDepth[c.bed]=a/panel.len; totDepth+=bedDepth[c.bed]; });
+    const bedsW=CONTENTW-nG*GBpx;
     let x=x0;
 
     panel.cols.forEach(col=>{
       if(col.grass!==undefined){
-        const w=GBW*FTX;
+        const w=GBpx;
         el('rect',{x:x,y:y,width:w,height:panelH,rx:3,class:'grass'});
         const cx=x+w/2, cy=y+panelH/2;
         const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',
@@ -111,7 +117,7 @@ function draw(species,blocks){
       } else {
         const list=blocks.filter(k=>k.half===panel.half&&k.bed===col.bed).sort((p,q)=>p.order-q.order);
         const bedArea=list.reduce((s,k)=>s+k.area,0)||1;
-        const w=(bedArea/panel.len)*FTX;           // column width = bed depth (road->toe)
+        const w=bedsW*(bedDepth[col.bed]/totDepth); // scaled so both halves are ~equal width
         let yy=y;
         list.forEach(k=>{
           const sp=species[k.species]||{}, h=panelH*(k.area/bedArea), c=sp.bloom_color||'#ccc';
@@ -170,8 +176,8 @@ function draw(species,blocks){
   });
 
   // fall-line axis across the top: road (left) -> toe (right)
-  el('text',{x:x0,y:34,class:'axis'}).textContent='◄ road / LOW (short)';
-  el('text',{x:maxX,y:34,'text-anchor':'end',class:'axis'}).textContent='toe / HIGH (tall) — top of slope ►';
+  el('text',{x:x0,y:34,class:'axis'}).textContent='◄ road/LOW (short)';
+  el('text',{x:maxX,y:34,'text-anchor':'end',class:'axis'}).textContent='toe/HIGH (tall) ►';
   // north-up indicator on the far left
   el('text',{x:18,y:y0+2,class:'panelhead'}).textContent='N ↑';
   el('text',{x:18,y:y-6,class:'axis'}).textContent='S ↓';
