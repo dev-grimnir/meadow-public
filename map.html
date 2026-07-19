@@ -35,32 +35,22 @@
   .legend .sw{width:14px;height:14px;border-radius:4px;border:1px solid rgba(34,49,31,.3);}
   .notes{font-size:.85rem;color:var(--muted);max-width:75ch;}
   .notes li{margin:.15rem 0;}
-  figure.progress{margin:1.4rem 0 .2rem;max-width:520px;}
-  figure.progress img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;background:#eee;}
-  figure.progress figcaption{font-size:.82rem;color:var(--muted);margin-top:.4rem;line-height:1.45;}
-  figure.progress .when{font-weight:600;color:var(--accent);}
 </style>
 </head>
 <body>
 <h1>West-Slope Planting Map</h1>
 <nav class="site"><a href="index.html">Home</a><a href="table.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="habitat.html">Habitat record</a><a href="species.md">species.md</a></nav>
-<p class="lede">Schematic of the west-slope layout — the fall line runs from the road edge down to the toe, and
-water is stopped at each 12&Prime; grass contour band (the green strips). Blocks are planting beds, sized by
-measured bed area and colored by flower color; hover or tap for the species. Source: <a href="gardenmap.md">gardenmap.md</a>.</p>
-<div class="frame"><svg id="svg" width="940" height="740" role="img" aria-label="Schematic planting map of the west slope"></svg></div>
+<p class="lede">Plan view from above — <b>north is up</b>, the <b>road edge is at the left</b> and the slope rises to
+the <b>toe (top of the slope) at the right</b>. The fall line runs left&ndash;right and is stopped at each 12&Prime; grass
+contour band (the green columns). Planting beds are the columns between the bands, sized by measured bed area and
+colored by flower color, with species stacked north&#8209;to&#8209;south; hover or tap for the species. Source:
+<a href="gardenmap.md">gardenmap.md</a>.</p>
+<div class="frame"><svg id="svg" role="img" aria-label="Schematic planting map of the west slope, north up, road at left and toe at right"></svg></div>
 <div class="legend" id="legend"></div>
 <ul class="notes">
-  <li>Green strips = 12&Prime; grass contour bands (road, mid, toe) — a staple-anchored erosion scaffold, left standing until the meadow's roots take over, then removed.</li>
-  <li>Beds are seeded short-in-front (road side) to tall-in-back (toe side). Hatched area = juglone zone around the black-walnut corner; every species there is juglone-tolerant. Dashed outline = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
+  <li>Green columns = 12&Prime; grass contour bands (road, mid, toe) — a staple-anchored erosion scaffold that runs the full slope length, left standing until the meadow's roots take over, then removed.</li>
+  <li>Beds are seeded short-in-front (road side, left) to tall-in-back (toe side, right). Hatched panel = juglone zone around the black-walnut corner; every species there is juglone-tolerant. Dashed panel = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
 </ul>
-<figure class="progress">
-  <img src="images/west-slope-north-tarped-2026-07-18.jpg"
-       alt="The north half of the west slope under black-plastic occultation — two tarped bed strips run down the grade with a scalped grass contour band between them, held flat by staggered field staples.">
-  <figcaption><span class="when">2026-07-18 — north half tarped down.</span> The butterfly-zone
-  beds under opaque-plastic occultation to kill the sod and surface weed seedbank, with the scalped
-  grass contour band left between the strips. Staple-anchored on a staggered grid (a 45° grade rolls
-  weights); the tarp stays on until fall sow day. The south half is still to be scalped.</figcaption>
-</figure>
 <div id="tip" role="tooltip"></div>
 <script>
 function parseCSV(text){const rows=[];let row=[],f='',q=false;for(let i=0;i<text.length;i++){const c=text[i];
@@ -82,56 +72,56 @@ function draw(species,blocks){
   const el=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(parent||svg).appendChild(e);return e;};
   const tip=document.getElementById('tip');
 
-  // geometry
-  const x0=150, CW=760, GH=18, BH=78, GAPX=2;
-  // each panel: sequence of rows top(road)->bottom(toe); grass rows and bed rows
+  // Orientation (matches gardenmap.md):
+  //   X, left -> right = road (LOW/short) -> toe (HIGH/tall) — the fall line
+  //   Y, top -> bottom = north -> south — the contour (north up)
+  const FTX=42;            // px per foot along the fall line (road -> toe)
+  const FTY=8;             // px per foot along the contour (north -> south)
+  const GBW=1;            // grass contour band width, feet
+  const x0=70, y0=64;      // left / top offset
+
   const panels=[
-    {half:'North', title:'North half — butterfly', sub:'6–9 ft deep · ~326 ft²',
-     rows:[{grass:'road band'},{bed:'front'},{grass:'mid band'},{bed:'back'},{grass:'toe band'}]},
-    {half:'South', title:'South half — nectar', sub:'8–13 ft deep · ~410 ft²',
-     rows:[{grass:'road band'},{bed:'front'},{bed:'mid'},{grass:'mid band'},{bed:'back'},{grass:'toe band'}]},
+    {half:'North', len:45, sub:'butterfly · ~326  ft² · 6–9 ft deep', zone:'🦋 butterfly territory',
+     cols:[{grass:'road'},{bed:'front'},{grass:'mid'},{bed:'back'},{grass:'toe'}]},
+    {half:'South', len:38, sub:'nectar · ~410 ft² · 8–13 ft deep', zone:'🌳 walnut / juglone corner',
+     cols:[{grass:'road'},{bed:'front'},{bed:'mid'},{grass:'mid'},{bed:'back'},{grass:'toe'}]},
   ];
 
-  // juglone hatch def
+  // juglone hatch
   const defs=el('defs',{});
   const pat=el('pattern',{id:'hatch',width:'8',height:'8',patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);
   el('rect',{width:8,height:8,fill:'rgba(139,94,60,0.05)'},pat);
   el('line',{x1:0,y1:0,x2:0,y2:8,stroke:'rgba(139,94,60,0.45)','stroke-width':1.5},pat);
 
-  // top axis: LOW -> HIGH across the width
-  const ax=el('text',{x:x0,y:24,class:'axis'}); ax.textContent='◄ road edge / LOW (short)';
-  const ax2=el('text',{x:x0+CW,y:24,'text-anchor':'end',class:'axis'}); ax2.textContent='toe / HIGH (tall) ►';
-  el('text',{x:20,y:24,class:'panelhead'}).textContent='N ↑';
+  let maxX=0, y=y0;
 
-  let y=44;
   panels.forEach(panel=>{
-    // panel header
-    el('text',{x:x0,y:y+2,class:'panelhead'}).textContent=panel.title;
-    el('text',{x:x0+CW,y:y+2,'text-anchor':'end',class:'panelsub'}).textContent=panel.sub;
-    y+=12;
-    const panelTop=y;
+    const panelH=panel.len*FTY, panelTop=y;
+    let x=x0;
 
-    // rows
-    panel.rows.forEach(rw=>{
-      if(rw.grass!==undefined){
-        el('rect',{x:x0,y:y,width:CW,height:GH,rx:3,class:'grass'});
-        const gl=el('text',{x:x0+CW/2,y:y+GH/2+3.5,'text-anchor':'middle',class:'grass-label'});
-        gl.textContent='12″ grass '+rw.grass;
-        y+=GH;
+    panel.cols.forEach(col=>{
+      if(col.grass!==undefined){
+        const w=GBW*FTX;
+        el('rect',{x:x,y:y,width:w,height:panelH,rx:3,class:'grass'});
+        const cx=x+w/2, cy=y+panelH/2;
+        const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',
+          transform:'rotate(-90 '+cx+' '+cy+')'});
+        gl.textContent=col.grass+' band';
+        x+=w;
       } else {
-        const list=blocks.filter(k=>k.half===panel.half&&k.bed===rw.bed).sort((p,q)=>p.order-q.order);
-        const tot=list.reduce((s,k)=>s+k.area,0)||1;
-        const usable=CW-GAPX*(list.length-1);
-        let x=x0;
+        const list=blocks.filter(k=>k.half===panel.half&&k.bed===col.bed).sort((p,q)=>p.order-q.order);
+        const bedArea=list.reduce((s,k)=>s+k.area,0)||1;
+        const w=(bedArea/panel.len)*FTX;           // column width = bed depth (road->toe)
+        let yy=y;
         list.forEach(k=>{
-          const sp=species[k.species]||{}, w=usable*(k.area/tot), c=sp.bloom_color||'#ccc';
-          const r=el('rect',{x:x,y:y,width:Math.max(w,3),height:BH,rx:4,fill:c,class:'blk'});
+          const sp=species[k.species]||{}, h=panelH*(k.area/bedArea), c=sp.bloom_color||'#ccc';
+          const r=el('rect',{x:x,y:yy,width:w,height:Math.max(h,3),rx:4,fill:c,class:'blk'});
           if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
-          if(w>=54){
-            const t1=el('text',{x:x+w/2,y:y+BH/2-2,'text-anchor':'middle',class:'blk-label',fill:lum(c)>0.55?'#22311f':'#fff'});
-            t1.textContent=k.species;
-            const t2=el('text',{x:x+w/2,y:y+BH/2+14,'text-anchor':'middle',class:'blk-label',fill:lum(c)>0.55?'#3a4a30':'#eef3ea','font-weight':'400','font-size':'11'});
-            t2.textContent=k.area+' ft²';
+          if(h>=84&&w>=30){
+            const cx=x+w/2, cy=yy+h/2, ink=lum(c)>0.55?'#22311f':'#fff', sub=lum(c)>0.55?'#3a4a30':'#eef3ea';
+            const g=el('g',{transform:'rotate(-90 '+cx+' '+cy+')'});
+            el('text',{x:cx,y:cy-3,'text-anchor':'middle',class:'blk-label',fill:ink},g).textContent=k.species;
+            el('text',{x:cx,y:cy+13,'text-anchor':'middle',class:'blk-label','font-weight':'400','font-size':'11',fill:sub},g).textContent=k.area+' ft²';
           }
           r.addEventListener('mousemove',e=>{
             tip.style.display='block';
@@ -146,35 +136,48 @@ function draw(species,blocks){
             tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';
           });
           r.addEventListener('mouseleave',()=>tip.style.display='none');
-          x+=w+GAPX;
+          yy+=h;
         });
-        y+=BH;
+        x+=w;
       }
     });
+    const panelW=x-x0;
+    maxX=Math.max(maxX,x);
 
-    // butterfly territory outline (north) / juglone zone (south)
+    // zone outline around the whole panel
     if(panel.half==='North'){
-      el('rect',{x:x0-8,y:panelTop-4,width:CW+16,height:y-panelTop+8,rx:10,fill:'none',
+      el('rect',{x:x0-6,y:panelTop-4,width:panelW+12,height:panelH+8,rx:10,fill:'none',
                  stroke:'rgba(63,107,46,0.55)','stroke-dasharray':'6 5','stroke-width':1.5,'pointer-events':'none'});
-      el('text',{x:x0+CW,y:y+14,'text-anchor':'end',class:'zone-label',fill:'#3f6b2e'})
-        .textContent='🦋 butterfly territory — monarch + swallowtail hosts';
     } else {
-      el('rect',{x:x0-8,y:panelTop-4,width:CW+16,height:y-panelTop+8,rx:10,fill:'url(#hatch)',
+      el('rect',{x:x0-6,y:panelTop-4,width:panelW+12,height:panelH+8,rx:10,fill:'url(#hatch)',
                  stroke:'rgba(139,94,60,0.55)','stroke-dasharray':'5 4','stroke-width':1.2,'pointer-events':'none'});
-      el('text',{x:x0-8,y:y+14,class:'zone-label',fill:'#7a5230'})
-        .textContent='🌳 black walnut (SW corner) — juglone zone; everything here is juglone-tolerant';
     }
-    y+=26;
 
-    // stairs bar after north
+    // half label + zone tag, to the right of the panel
+    el('text',{x:x+16,y:panelTop+16,class:'panelhead'}).textContent=panel.half+' half';
+    el('text',{x:x+16,y:panelTop+32,class:'panelsub'}).textContent=panel.sub;
+    el('text',{x:x+16,y:panelTop+50,class:'zone-label',fill:panel.half==='North'?'#3f6b2e':'#7a5230'}).textContent=panel.zone;
+
+    y+=panelH;
+
+    // concrete stairs between the north and south blocks
     if(panel.half==='North'){
-      el('rect',{x:x0-8,y:y,width:CW+16,height:24,fill:'#dcd9d2',rx:4});
-      el('text',{x:x0+CW/2,y:y+16,'text-anchor':'middle',class:'axis'}).textContent='C O N C R E T E   S T A I R S';
-      y+=40;
+      const sh=24;
+      el('rect',{x:x0-6,y:y+7,width:panelW+12,height:sh,fill:'#dcd9d2',rx:4});
+      el('text',{x:x0+panelW/2,y:y+7+16,'text-anchor':'middle',class:'axis'}).textContent='CONCRETE · STAIRS';
+      y+=sh+14;
     }
   });
 
-  svg.setAttribute('height', y+20);
+  // fall-line axis across the top: road (left) -> toe (right)
+  el('text',{x:x0,y:34,class:'axis'}).textContent='◄ road / LOW (short)';
+  el('text',{x:maxX,y:34,'text-anchor':'end',class:'axis'}).textContent='toe / HIGH (tall) — top of slope ►';
+  // north-up indicator on the far left
+  el('text',{x:18,y:y0+2,class:'panelhead'}).textContent='N ↑';
+  el('text',{x:18,y:y-6,class:'axis'}).textContent='S ↓';
+
+  svg.setAttribute('width', maxX+210);
+  svg.setAttribute('height', y+16);
 
   // legend (unique species in map order)
   const seen=new Set(), lg=document.getElementById('legend');
