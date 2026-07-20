@@ -61,9 +61,13 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
 
 ## Method — occultation → contour-band beds
 
-- **Scalp the grass short first** and rake off the heavy clippings — tall grass tents the
-  plastic off the soil into a domed air pocket that catches wind, ponds water, and won't
-  make the contact that kills the sod. (Learned the hard way on the NW half.)
+- **Scalp the grass short first** and rake off the heavy clippings — the kill is *light
+  exclusion* (the sod starves in the dark), not the plastic touching the soil, so a dark,
+  staked-down dome still kills what's under it. Scalp anyway: tall grass tents the sheet and
+  lifts the *edges*, where light leaks in around the margins and a grassy fringe survives —
+  and the dome catches wind on the grade and ponds water. Snug contact only *speeds* the
+  kill by trapping heat — both the sun's and the low-grade heat thrown off by the dead grass
+  rotting underneath — a bonus, not the mechanism. (Learned the hard way on the NW half.)
 - Tarp the whole bed with opaque plastic (3' roll here) to kill the sod and the surface
   weed seedbank. **Buy the plastic ~1 ft wider than the killed strip** — the extra is your
   staple margin and the material to fold or patch the corners; a roll the same width as
