@@ -14,13 +14,18 @@ Per-species establishment status also renders live as badges on the
   the fall schedule. Re-laid with the corrected method (scalp → flat → staggered field
   staples, grass band scalped down the middle); both strips in contact, no doming. Tarp
   stays on the beds until sow day.
+- **July 19: south half (SW / nectar–walnut zone) scalped hard and tarped down** — the whole
+  west slope is now occulted (both halves down). Geometry came out irregular from the brutal
+  scalp (expected); exact measurements to come in a few days. Established bee balm / bergamot
+  at the walnut corner spared and cut around, per the standing decision. ~12-hour day.
 
 ![West slope, north half tarped down — two occultation strips run down the 45° grade with
 a scalped grass contour band between them, field-stapled on a staggered grid to hold the
 plastic flat against the sod (2026-07-18).](images/west-slope-north-tarped-2026-07-18.jpg)
 
 **Active:** the south frontage coneflower patches establishing; west slope bee balm growing;
-**south half (SW / nectar–walnut zone) still to scalp** before it can be tarped
+**whole west slope now tarped (both halves) — occulting until fall sow day** (measurements of
+the south beds pending)
 
 ---
 

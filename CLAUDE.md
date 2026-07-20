@@ -51,8 +51,11 @@ gets lost between sessions. Companion to `gardenmap.md`, `gardendesign.md`, and
   windy day, and a couple of slight tents near the strip tops (bit of thatch left under)
   — flatten with extra staples if easy. (First attempt ballooned over uncut grass with
   edge-only staples — that's the lesson logged in Method below.)
-- **South half / SW (nectar / walnut zone):** not started — **still need to scalp** the
-  south slope before tarping. Plastic + staples on hand.
+- **South half / SW (nectar / walnut zone):** **scalped hard and tarped down (2026-07-19).**
+  Whole west slope now occulted — both halves down. Geometry came out irregular from the
+  brutal scalp (expected, and flagged in advance); exact measurements to come in a few days.
+  Established bee balm / bergamot at the walnut corner spared and cut around, per the standing
+  decision. Staples/plastic run to the end locking it down.
 - Design and measurements are locked (see `gardenmap.md`). **Not yet sown** — sowing
   is late Oct–Nov, after the tarp comes off the beds.
 
