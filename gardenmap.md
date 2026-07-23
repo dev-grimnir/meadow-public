@@ -21,18 +21,18 @@
    |G| BW |G| MW |G|
    _____________________
    |    CONCRETE STAIRS   |
-   _________________________      SOUTH HALF — nectar · 38'/40' · 8-13' deep · ~410 ft2
-   |G| WY | SB |G| NA |G|         bands: road + mid + toe
-   |G| WY | SB |G| NA |G|         front WY/WC · mid SB/BS/PB · back NA (tall)
-   |G| WY | SB |G| NA |G|         WC at the walnut corner (southwest)
-   |G| WY | BS |G| NA |G|         NA on the toe side, toward the deep south end
-   |G| WY | BS |G| NA |G|
-   |G| WC | SB |G| NA |G|
-   |G| WC | SB |G| NA |G|
-   |G| WC | SB |G| NA |G|
-   |G| WC | PB |G| NA |G|
-   |G| WC | PB |G| NA |G|
-   _________________________
+   _____________________________________  SOUTH HALF — nectar · 38'/40' · 8-13' deep · ~410 ft2
+   |G| WY |G| SB |G| BE |G| NA |G|         as-built 2026-07: 4 beds (scalped face had room for 4, not 3)
+   |G| WY |G| BS |G| BE |G| NA |G|         bands: road + mid + toe (erosion scaffold)
+   |G| WY |G| BS |G| BE |G| NA |G|         front WY/WC · mid-lo SB/BS · mid-hi BE · back NA (tall)
+   |G| WY |G| bb |G| BE |G| NA |G|         WC at the walnut corner (southwest)
+   |G| WY |G| SB |G| BE |G| NA |G|         bb = established bee-balm/bergamot clump, SPARED —
+   |G| WC |G| bb |G| bb |G| NA |G|              cut around; the 2 inner beds were pieced around it
+   |G| WC |G| SB |G| BE |G| NA |G|         NA on the toe side, toward the deep south end
+   |G| WC |G| bb |G| BE |G| NA |G|
+   |G| WC |G| SB |G| BE |G| NA |G|
+   |G| WC |G| SB |G| BE |G| NA |G|
+   _____________________________________
 
    Grass bands ~249 ft2 · planting beds ~487 ft2  (194 north + 293 south)
 
@@ -40,7 +40,8 @@
    BW  Butterfly Weed    GA  Golden Alexanders  SA  Smooth Blue Aster
    MT  Mountain Mint     MW  Common Milkweed    WY  White Yarrow
    WC  Wild Columbine    SB  Scarlet Bee Balm   BS  Blazing Star
-   PB  Purple Bee Balm   NA  New England Aster
+   BE  Black-Eyed Susan  NA  New England Aster
+   bb  established bee-balm / bergamot clump — spared, cut around (not re-sown)
 ```
 
 Bands run **across** the fall line: water flows from the road edge down to the
@@ -50,6 +51,12 @@ a whole-slope tarp — that come out once the meadow's own roots take over. The
 planting **beds** between them are seeded short-in-front (road side) to tall-in-back
 (toe side); mountain mint sits centered in the north to spread outward, and wild
 columbine takes the walnut corner for its part shade.
+
+The south half came in at **four beds rather than three** (the hard-scalped face had
+room), with the two inner beds tarped in pieces around the spared bee-balm clumps.
+**Black-Eyed Susan replaces purple bee balm** in the mid-high bed — the two *Monarda*
+would only cross and blur over time, and the bergamot already persists in the spared
+clumps; the yellow bridges Scarlet Bee Balm (summer) and New England Aster (fall).
 
 An interactive rendering of this layout:
 [west-slope map](https://dev-grimnir.github.io/meadow-public/map.html). The one-page

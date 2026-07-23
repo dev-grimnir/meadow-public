@@ -18,14 +18,22 @@ Per-species establishment status also renders live as badges on the
   west slope is now occulted (both halves down). Geometry came out irregular from the brutal
   scalp (expected); exact measurements to come in a few days. Established bee balm / bergamot
   at the walnut corner spared and cut around, per the standing decision. ~12-hour day.
+- **July 23: south half measured — 4 beds, not 3.** The hard scalp left room for four contour
+  beds: bottom (road) and top (toe) bands are clean ~40' runs; the two inner beds were tarped
+  in pieces around the spared bee-balm clumps. ~144 linear ft of ~2.5' strip, ~353 ft² tarped.
+  As-built map + per-bed measurements in the west-slope working memory (`CLAUDE.md`).
+- **July 23: Black-Eyed Susan replaces purple bee balm in the sown mid-high south bed.** The
+  two *Monarda* would only cross and blur over time; the bergamot already persists in the
+  spared clumps, so it stays without being re-sown. Black-Eyed Susan adds yellow, bridges
+  the scarlet→aster bloom gap, is juglone-tolerant, and feeds goldfinches.
 
 ![West slope, north half tarped down — two occultation strips run down the 45° grade with
 a scalped grass contour band between them, field-stapled on a staggered grid to hold the
 plastic flat against the sod (2026-07-18).](images/west-slope-north-tarped-2026-07-18.jpg)
 
 **Active:** the south frontage coneflower patches establishing; west slope bee balm growing;
-**whole west slope now tarped (both halves) — occulting until fall sow day** (measurements of
-the south beds pending)
+**whole west slope now tarped (both halves) — occulting until fall sow day** (south beds
+measured 2026-07-23 — 4 beds as-built)
 
 ---
 
@@ -56,6 +64,7 @@ the south beds pending)
   - Mountain Mint (Pycnanthemum)
   - White Yarrow (Achillea millefolium)
   - Wild Columbine (Aquilegia canadensis)
+  - Black-Eyed Susan (Rudbeckia — mid-high south bed; hirta vs. fulgida chosen at order)
   - Remaining SBB seed
   - Additional Liatris
 - Collect ironweed seed from mother plant downhill
@@ -170,9 +179,11 @@ reference list). The seasonal calendar above is the by-date view of the same wor
 Planted west slope, south end; chosen over bergamot for red flower color. June
 2026: branched, healthy, establishing well. Fibrous roots — jug-then-plant works.
 
-### Purple Bee Balm / Wild Bergamot — Established (west slope)
+### Purple Bee Balm / Wild Bergamot — Established (west slope); retired from sown plan
 Planted west slope, south end, mixed with scarlet bee balm; more drought-tolerant.
-June 2026: establishing.
+June 2026: establishing. **2026-07-23: dropped from the sown plan** — same genus as scarlet
+bee balm (they hybridize and blur over time). Kept only as the **spared clumps** (`bb` on the
+map); Black-Eyed Susan sown in the mid-high bed in its place.
 
 ### Common Milkweed — Jug attempt failed; direct-sow planned fall 2026
 2026 jug attempt (west slope north end) mostly failed — taproot species need
@@ -227,6 +238,14 @@ Sourcing: Prairie Moon Nursery. Early spring interest. Suitable for north edge
 ### Blazing Star — Remaining jug seed to direct-sow fall 2026; more on order
 2026 jug attempt likely failed. Direct-sow fall 2026. One jug of remaining SBB seed
 also to be direct-sown. Prairie Moon order pending for more.
+
+### Black-Eyed Susan — Planned fall 2026 direct-sow (mid-high south bed)
+Added 2026-07-23 in place of purple bee balm (see status log). Yellow, mid-to-late-summer
+bloom that bridges Scarlet Bee Balm (summer) and New England Aster (fall); juglone-tolerant
+(walnut side); goldfinch seed heads; Silvery Checkerspot larval host. **Species TBD at
+order:** *R. hirta* (short-lived, reseeds/drifts — needs the spring volunteer-pull like the
+aster) vs. *R. fulgida* (clumping, longer-lived, tidier). Prairie Moon carries both. Small
+seed — sow at the tiny-seeded rate (10–15/ft²), press in, don't bury.
 
 ### Spicebush — Future candidate (2028+)
 East edge / north edge woodland candidate. Plant from nursery stock (not seed).
