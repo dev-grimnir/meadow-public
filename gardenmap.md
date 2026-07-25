@@ -34,7 +34,7 @@
    |G| WC |G| SB |G| BE |G| NA |G|
    _____________________________________
 
-   Grass bands ~249 ft2 · planting beds ~487 ft2  (194 north + 293 south)
+   Planting beds ~688 ft2 measured as-built (335 north + 353 south) · grass bands ~249 ft2 (design est.)
 
    G   12" grass contour band, staple-anchored (erosion scaffold; temporary)
    BW  Butterfly Weed    GA  Golden Alexanders  SA  Smooth Blue Aster
