@@ -42,15 +42,15 @@
 <nav class="site"><a href="index.html">Home</a><a href="table.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="habitat.html">Habitat record</a><a href="species.md">species.md</a></nav>
 <p class="lede">Plan view from above — <b>north is up</b>, the <b>road edge is at the left</b> and the slope rises to
 the <b>toe (top of the slope) at the right</b>. The fall line runs left&ndash;right and is stopped at each 12&Prime; grass
-contour band (the green columns). Planting beds are the columns between the bands, drawn at measured bed width (the
-strips are roughly uniform ~2.5&nbsp;ft) and colored by flower color, with species stacked north&#8209;to&#8209;south
-in proportion to their area; hover or tap for the species. Source:
-<a href="gardenmap.md">gardenmap.md</a>.</p>
-<div class="frame"><svg id="svg" role="img" aria-label="Schematic planting map of the west slope, north up, road at left and toe at right"></svg></div>
+contour band (the green columns). Beds are drawn to the <b>measured as-built scale</b> — each tarped patch to its
+measured length and width — and the two inner south beds are broken around the <b>spared bee-balm clumps</b> (the dashed
+green gaps). Colored by flower color; hover or tap for a patch or clump. Source: <a href="gardenmap.md">gardenmap.md</a>.</p>
+<div class="frame"><svg id="svg" role="img" aria-label="Scale planting map of the west slope, north up, road at left and toe at right, showing the measured as-built beds and patches"></svg></div>
 <div class="legend" id="legend"></div>
 <ul class="notes">
   <li>Green columns = 12&Prime; grass contour bands (road, mid, toe) — a staple-anchored erosion scaffold that runs the full slope length, left standing until the meadow's roots take over, then removed.</li>
-  <li>Beds are seeded short-in-front (road side, left) to tall-in-back (toe side, right). Hatched panel = juglone zone around the black-walnut corner; every species there is juglone-tolerant. Dashed panel = butterfly territory (both monarch hosts + the black-swallowtail host).</li>
+  <li>Dashed green gaps inside the two inner south beds = the established bee-balm / bergamot clumps, spared and cut around (not re-sown).</li>
+  <li>Patch <b>lengths and widths are as measured</b> (2026-07-23). The gap lengths between patches are inferred to fill each bed's ~41&nbsp;ft run — the tarped pieces themselves are to scale. Hatched panel = juglone zone (walnut corner); dashed panel = butterfly territory.</li>
 </ul>
 <div id="tip" role="tooltip"></div>
 <script>
@@ -61,32 +61,52 @@ function parseCSV(text){const rows=[];let row=[],f='',q=false;for(let i=0;i<text
 function toObjs(rows){const h=rows.shift().map(s=>s.trim());return rows.filter(r=>r.length>1).map(r=>{const o={};h.forEach((k,i)=>o[k]=r[i]);return o;});}
 function lum(hex){const n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255;return (0.2126*r+0.7152*g+0.0722*b)/255;}
 
-Promise.all([fetch('data/species.csv').then(r=>r.text()),fetch('data/layout.csv').then(r=>r.text())])
-.then(([sTxt,lTxt])=>{
+// Measured as-built geometry (feet), 2026-07-23. Each bed is a column of the
+// measured strip width; its segments run north -> south to scale. The two inner
+// south beds (Scarlet Bee Balm/Blazing Star, Black-Eyed Susan) are broken into
+// their measured tarped patches around the spared bee-balm clumps (bb = grass gap).
+// Only the gap lengths are inferred (to fill each bed to the ~41 ft run); the
+// tarped patch lengths and the bed widths are as measured.
+const GEO=[
+ {half:'North', sub:'butterfly · ~335 ft² beds · 6–9 ft deep · 2 beds', zone:'🦋 butterfly territory',
+  cols:[
+   {grass:'road'},
+   {w:2.5, segs:[{sp:'Butterfly Weed',len:36},{sp:'Golden Alexanders',len:13.6}]},
+   {grass:'mid'},
+   {w:4.5, segs:[{sp:'Smooth Blue Aster',len:17.1},{sp:'Mountain Mint',len:12.7},{sp:'Common Milkweed',len:17.1}]},
+   {grass:'toe'}
+  ]},
+ {half:'South', sub:'nectar · ~353 ft² beds · 8–13 ft deep · 4 beds', zone:'🌳 walnut / juglone corner',
+  cols:[
+   {grass:'road'},
+   {w:2.2, segs:[{sp:'White Yarrow',len:21},{sp:'Wild Columbine',len:20}]},
+   {grass:'',gw:12},
+   {w:2.5, segs:[{sp:'Scarlet Bee Balm',len:8},{sp:'Blazing Star',len:8.3},{bb:1,len:4.05},
+                {sp:'Scarlet Bee Balm',len:2.17},{sp:'Scarlet Bee Balm',len:2.83},{bb:1,len:4.05},
+                {sp:'Scarlet Bee Balm',len:11.58}]},
+   {grass:'mid'},
+   {w:2.2, segs:[{sp:'Black-Eyed Susan',len:24},{bb:1,len:10.75},{sp:'Black-Eyed Susan',len:6.25}]},
+   {grass:'',gw:12},
+   {w:2.85, segs:[{sp:'New England Aster',len:41}]},
+   {grass:'toe'}
+  ]}
+];
+
+fetch('data/species.csv').then(r=>r.text()).then(sTxt=>{
   const species={}; toObjs(parseCSV(sTxt)).forEach(s=>species[s.common_name]=s);
-  const blocks=toObjs(parseCSV(lTxt)).map(b=>({...b,order:+b.order,area:+b.area_ft2}));
-  draw(species,blocks);
+  draw(species);
 });
 
-function draw(species,blocks){
+function draw(species){
   const svg=document.getElementById('svg'), NS='http://www.w3.org/2000/svg';
   const el=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(parent||svg).appendChild(e);return e;};
   const tip=document.getElementById('tip');
+  const FTY=8, CONTENTW=300, GBpx=34, x0=70, y0=64, GRASS='#8aa96b';
 
-  // Orientation (matches gardenmap.md):
-  //   X, left -> right = road (LOW/short) -> toe (HIGH/tall) — the fall line
-  //   Y, top -> bottom = north -> south — the contour (north up)
-  const FTY=8;             // px per foot along the contour (north -> south)
-  const CONTENTW=300;      // road->toe width per half — both halves drawn ~equal width
-  const GBpx=34;           // 12" grass contour band, px
-  const x0=70, y0=64;      // left / top offset
-
-  const panels=[
-    {half:'North', len:45, sub:'butterfly · ~335 ft² beds · 6–9 ft deep', zone:'🦋 butterfly territory',
-     cols:[{grass:'road'},{bed:'front',wft:2.5},{grass:'mid'},{bed:'back',wft:4.5},{grass:'toe'}]},
-    {half:'South', len:40, sub:'nectar · ~353 ft² beds · 8–13 ft deep · 4 beds', zone:'🌳 walnut / juglone corner',
-     cols:[{grass:'road'},{bed:'front',wft:2.2},{grass:'',w:14},{bed:'midlow',wft:2.5},{grass:'mid'},{bed:'midhigh',wft:2.2},{grass:'',w:14},{bed:'back',wft:2.85},{grass:'toe'}]},
-  ];
+  const showTip=(e,html)=>{tip.style.display='block';tip.innerHTML=html;
+    const w2=280,ww=window.innerWidth;
+    tip.style.left=Math.min(e.clientX+14,ww-w2-10)+'px';
+    tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';};
 
   // juglone hatch
   const defs=el('defs',{});
@@ -96,63 +116,69 @@ function draw(species,blocks){
 
   let maxX=0, y=y0;
 
-  panels.forEach(panel=>{
-    const panelH=panel.len*FTY, panelTop=y;
-    // bed depths (road->toe) so both halves fill the same overall width
-    const bedDepth={}; let totDepth=0, gTot=0;
-    panel.cols.forEach(c=>{ if(c.grass!==undefined){gTot+=(c.w||GBpx);return;}
-      bedDepth[c.bed]=c.wft; totDepth+=bedDepth[c.bed]; });
+  GEO.forEach(panel=>{
+    let run=0;                       // slope length = longest bed
+    panel.cols.forEach(c=>{ if(c.segs){const s=c.segs.reduce((a,b)=>a+b.len,0); if(s>run)run=s;} });
+    const panelH=run*FTY, panelTop=y;
+    let gTot=0, totW=0;
+    panel.cols.forEach(c=>{ if(c.grass!==undefined)gTot+=(c.gw||GBpx); else totW+=c.w; });
     const bedsW=CONTENTW-gTot;
     let x=x0;
 
     panel.cols.forEach(col=>{
       if(col.grass!==undefined){
-        const w=col.w||GBpx;
+        const w=col.gw||GBpx;
         el('rect',{x:x,y:y,width:w,height:panelH,rx:3,class:'grass'});
         if(col.grass){
           const cx=x+w/2, cy=y+panelH/2;
-          const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',
-            transform:'rotate(-90 '+cx+' '+cy+')'});
+          const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',transform:'rotate(-90 '+cx+' '+cy+')'});
           gl.textContent=col.grass+' band';
         }
         x+=w;
       } else {
-        const list=blocks.filter(k=>k.half===panel.half&&k.bed===col.bed).sort((p,q)=>p.order-q.order);
-        const bedArea=list.reduce((s,k)=>s+k.area,0)||1;
-        const w=bedsW*(bedDepth[col.bed]/totDepth); // scaled so both halves are ~equal width
+        const w=bedsW*(col.w/totW);
         let yy=y;
-        list.forEach(k=>{
-          const sp=species[k.species]||{}, h=panelH*(k.area/bedArea), c=sp.bloom_color||'#ccc';
-          const r=el('rect',{x:x,y:yy,width:w,height:Math.max(h,3),rx:4,fill:c,class:'blk'});
-          if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
-          if(h>=84&&w>=30){
-            const cx=x+w/2, cy=yy+h/2, ink=lum(c)>0.55?'#22311f':'#fff', sub=lum(c)>0.55?'#3a4a30':'#eef3ea';
-            const g=el('g',{transform:'rotate(-90 '+cx+' '+cy+')'});
-            el('text',{x:cx,y:cy-3,'text-anchor':'middle',class:'blk-label',fill:ink},g).textContent=k.species;
-            el('text',{x:cx,y:cy+13,'text-anchor':'middle',class:'blk-label','font-weight':'400','font-size':'11',fill:sub},g).textContent=k.area+' ft²';
-          }
-          r.addEventListener('mousemove',e=>{
-            tip.style.display='block';
-            tip.innerHTML='<img src="images/'+(sp.image||'')+'" alt="">'
-              +'<div class="nm">'+k.species+'</div><div class="bt">'+(sp.botanical_name||'')+'</div>'
-              +'<dl><dt>Here</dt><dd>'+k.area+' ft² · '+panel.half.toLowerCase()+' '+k.bed+' bed</dd>'
+        col.segs.forEach(sg=>{
+          const h=sg.len*FTY;
+          if(sg.bb){                 // spared bee-balm clump (grass gap in the tarp)
+            const r=el('rect',{x:x,y:yy,width:w,height:Math.max(h,3),rx:3,fill:GRASS,stroke:'#6f8c53','stroke-width':1,class:'blk'});
+            r.setAttribute('stroke-dasharray','3 2');
+            if(h>=44&&w>=26){
+              const cx=x+w/2, cy=yy+h/2;
+              const g=el('g',{transform:'rotate(-90 '+cx+' '+cy+')'});
+              el('text',{x:cx,y:cy+3,'text-anchor':'middle',class:'blk-label','font-size':'10','font-weight':'600',fill:'#2c3a1c'},g).textContent='spared bee balm';
+            }
+            r.addEventListener('mousemove',e=>showTip(e,'<div class="nm">Spared bee-balm clump</div>'
+              +'<div class="bt">Monarda didyma / fistulosa</div>'
+              +'<dl><dt>Here</dt><dd>established clump, cut around — not re-sown</dd>'
+              +'<dt>Gap</dt><dd>~'+sg.len.toFixed(1)+' ft break in the tarp</dd></dl>'));
+            r.addEventListener('mouseleave',()=>tip.style.display='none');
+          } else {
+            const sp=species[sg.sp]||{}, c=sp.bloom_color||'#ccc';
+            const r=el('rect',{x:x,y:yy,width:w,height:Math.max(h,3),rx:4,fill:c,class:'blk'});
+            if(lum(c)>0.9)r.setAttribute('stroke','rgba(34,49,31,.45)');
+            if(h>=64&&w>=28){
+              const cx=x+w/2, cy=yy+h/2, ink=lum(c)>0.55?'#22311f':'#fff', sub=lum(c)>0.55?'#3a4a30':'#eef3ea';
+              const g=el('g',{transform:'rotate(-90 '+cx+' '+cy+')'});
+              el('text',{x:cx,y:cy-3,'text-anchor':'middle',class:'blk-label',fill:ink},g).textContent=sg.sp;
+              el('text',{x:cx,y:cy+13,'text-anchor':'middle',class:'blk-label','font-weight':'400','font-size':'11',fill:sub},g).textContent='~'+sg.len.toFixed(1)+' ft';
+            }
+            r.addEventListener('mousemove',e=>showTip(e,'<img src="images/'+(sp.image||'')+'" alt="">'
+              +'<div class="nm">'+sg.sp+'</div><div class="bt">'+(sp.botanical_name||'')+'</div>'
+              +'<dl><dt>Patch</dt><dd>~'+sg.len.toFixed(1)+' ft × '+col.w+' ft · '+panel.half.toLowerCase()+'</dd>'
               +'<dt>Bloom</dt><dd>'+(sp.bloom_label||'')+'</dd><dt>Height</dt><dd>'+(sp.height_label||'')+'</dd>'
               +'<dt>Juglone</dt><dd>'+(sp.juglone||'')+'</dd><dt>Wildlife</dt><dd>'+(sp.wildlife_value||'')
-              +(sp.caterpillar_host&&sp.caterpillar_host!=='—'?' · host: '+sp.caterpillar_host:'')+'</dd></dl>';
-            const w2=280,ww=window.innerWidth;
-            tip.style.left=Math.min(e.clientX+14,ww-w2-10)+'px';
-            tip.style.top=Math.max(10,Math.min(e.clientY+14,window.innerHeight-260))+'px';
-          });
-          r.addEventListener('mouseleave',()=>tip.style.display='none');
+              +(sp.caterpillar_host&&sp.caterpillar_host!=='—'?' · host: '+sp.caterpillar_host:'')+'</dd></dl>'));
+            r.addEventListener('mouseleave',()=>tip.style.display='none');
+          }
           yy+=h;
         });
         x+=w;
       }
     });
-    const panelW=x-x0;
-    maxX=Math.max(maxX,x);
+    const panelW=x-x0; maxX=Math.max(maxX,x);
 
-    // zone outline around the whole panel
+    // zone outline
     if(panel.half==='North'){
       el('rect',{x:x0-6,y:panelTop-4,width:panelW+12,height:panelH+8,rx:10,fill:'none',
                  stroke:'rgba(63,107,46,0.55)','stroke-dasharray':'6 5','stroke-width':1.5,'pointer-events':'none'});
@@ -160,15 +186,12 @@ function draw(species,blocks){
       el('rect',{x:x0-6,y:panelTop-4,width:panelW+12,height:panelH+8,rx:10,fill:'url(#hatch)',
                  stroke:'rgba(139,94,60,0.55)','stroke-dasharray':'5 4','stroke-width':1.2,'pointer-events':'none'});
     }
-
-    // half label + zone tag, to the right of the panel
+    // half label + zone tag
     el('text',{x:x+16,y:panelTop+16,class:'panelhead'}).textContent=panel.half+' half';
     el('text',{x:x+16,y:panelTop+32,class:'panelsub'}).textContent=panel.sub;
     el('text',{x:x+16,y:panelTop+50,class:'zone-label',fill:panel.half==='North'?'#3f6b2e':'#7a5230'}).textContent=panel.zone;
 
     y+=panelH;
-
-    // concrete stairs between the north and south blocks
     if(panel.half==='North'){
       const sh=24;
       el('rect',{x:x0-6,y:y+7,width:panelW+12,height:sh,fill:'#dcd9d2',rx:4});
@@ -177,24 +200,26 @@ function draw(species,blocks){
     }
   });
 
-  // fall-line axis across the top: road (left) -> toe (right)
+  // fall-line axis: road (left) -> toe (right)
   el('text',{x:x0,y:34,class:'axis'}).textContent='◄ road/LOW (short)';
   el('text',{x:maxX,y:34,'text-anchor':'end',class:'axis'}).textContent='toe/HIGH (tall) ►';
-  // north-up indicator on the far left
   el('text',{x:18,y:y0+2,class:'panelhead'}).textContent='N ↑';
   el('text',{x:18,y:y-6,class:'axis'}).textContent='S ↓';
 
   svg.setAttribute('width', maxX+210);
   svg.setAttribute('height', y+16);
 
-  // legend (unique species in map order)
+  // legend
   const seen=new Set(), lg=document.getElementById('legend');
-  blocks.forEach(k=>{ if(seen.has(k.species))return; seen.add(k.species);
-    const sp=species[k.species]||{};
+  GEO.forEach(p=>p.cols.forEach(c=>{ if(!c.segs)return; c.segs.forEach(sg=>{
+    if(sg.bb){ if(seen.has('_bb'))return; seen.add('_bb');
+      const d=document.createElement('span'); d.className='chip';
+      d.innerHTML='<span class="sw" style="background:'+GRASS+';border-style:dashed"></span>spared bee-balm clump'; lg.appendChild(d); return; }
+    if(seen.has(sg.sp))return; seen.add(sg.sp);
+    const sp=species[sg.sp]||{};
     const d=document.createElement('span'); d.className='chip';
-    d.innerHTML='<span class="sw" style="background:'+(sp.bloom_color||'#ccc')+'"></span>'+k.species;
-    lg.appendChild(d);
-  });
+    d.innerHTML='<span class="sw" style="background:'+(sp.bloom_color||'#ccc')+'"></span>'+sg.sp; lg.appendChild(d);
+  });}));
 }
 </script>
 </body>
