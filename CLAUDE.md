@@ -157,9 +157,11 @@ mid-to-late-summer bloom that **bridges Scarlet Bee Balm (summer) → New Englan
 **juglone-tolerant** (matters on the walnut side), goldfinch seed heads (ties to the standing
 leave-the-stems rule), and a **Silvery Checkerspot** larval host.
 
-- **Open — sow-day seed choice:** *R. hirta* (short-lived, reseeds/drifts — meadow, more
-  finch seed, needs the same spring volunteer-pull as the aster) vs. *R. fulgida* (clumping,
-  longer-lived, tidier, less management). Decide when ordering seed (mid-August).
+- **Decided (2026-08-02):** *R. fulgida* var. *sullivantii* (Orange Coneflower) — clumping
+  perennial, longer-lived and tidier (over *hirta*'s reseeding meadow habit); straight-species
+  variety, clears the no-cultivar rule. **3 packets** ordered (Prairie Moon packs ~150 seeds;
+  a clumper is sown spaced, ~450 over the ~65 ft² bed). Omitted from the first seed order —
+  bought separately.
 - Code **BE** now slots into the mid-high bed in `gardenmap.md` in place of PB.
 
 ## Standing rules / long-term

@@ -64,7 +64,7 @@ measured 2026-07-23 — 4 beds as-built)
   - Mountain Mint (Pycnanthemum)
   - White Yarrow (Achillea millefolium)
   - Wild Columbine (Aquilegia canadensis)
-  - Black-Eyed Susan (Rudbeckia — mid-high south bed; hirta vs. fulgida chosen at order)
+  - Black-Eyed Susan (*Rudbeckia fulgida* var. *sullivantii* — mid-high south bed; 3 packets)
   - Remaining SBB seed
   - Additional Liatris
 - Collect ironweed seed from mother plant downhill
@@ -242,10 +242,11 @@ also to be direct-sown. Prairie Moon order pending for more.
 ### Black-Eyed Susan — Planned fall 2026 direct-sow (mid-high south bed)
 Added 2026-07-23 in place of purple bee balm (see status log). Yellow, mid-to-late-summer
 bloom that bridges Scarlet Bee Balm (summer) and New England Aster (fall); juglone-tolerant
-(walnut side); goldfinch seed heads; Silvery Checkerspot larval host. **Species TBD at
-order:** *R. hirta* (short-lived, reseeds/drifts — needs the spring volunteer-pull like the
-aster) vs. *R. fulgida* (clumping, longer-lived, tidier). Prairie Moon carries both. Small
-seed — sow at the tiny-seeded rate (10–15/ft²), press in, don't bury.
+(walnut side); goldfinch seed heads; Silvery Checkerspot larval host. **Species chosen
+(2026-08-02): *R. fulgida* var. *sullivantii* (Orange Coneflower)** — clumping, longer-lived,
+tidier; straight-species variety. **3 packets** (Prairie Moon packs ~150 seeds each); as a
+clumper, sow spaced (~450 seeds over the ~65 ft² bed), press in, don't bury. Missed on the
+first order — bought separately.
 
 ### Spicebush — Future candidate (2028+)
 East edge / north edge woodland candidate. Plant from nursery stock (not seed).

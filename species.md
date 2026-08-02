@@ -39,22 +39,23 @@ one-page habitat & compliance summary is the
 - **Wildlife:** High
 - **Sow rate:** 8–10/ft² (erratic germ over 2 years — sow high)
 
-### Black-Eyed Susan (*Rudbeckia hirta* or *R. fulgida*)
+### Black-Eyed Susan / Orange Coneflower (*Rudbeckia fulgida* var. *sullivantii*)
 
 ![Black-Eyed Susan](images/black-eyed-susan.jpg)
 
 - **Native:** Yes
-- **Root:** Fibrous
+- **Root:** Fibrous (clumping perennial)
 - **Bloom:** Jul–Oct (yellow)
 - **Height:** 2–3 ft
 - **Light:** Full sun–part sun
 - **Soil:** Well-drained; dry-tolerant; poor OK
-- **Spread:** 12–18 in; self-seeds
+- **Spread:** 12–24 in; clumping perennial
 - **Juglone:** Tolerant
 - **Wildlife:** High (Silvery Checkerspot host; goldfinch seed heads)
-- **Sow rate:** 10–15/ft² (small seed; press in, don't bury)
+- **Sow rate:** clumper — sow spaced, ~450 seeds over the ~65 ft² bed (not broadcast-heavy)
 - **Note:** Added 2026-07-23 for the mid-high south bed in place of purple bee balm.
-  Species (*hirta* vs. *fulgida*) chosen at seed order.
+  Species chosen (2026-08-02): *R. fulgida* var. *sullivantii* (Orange Coneflower) — the
+  clumping perennial, straight-species variety. 3 packets, ordered separately.
 
 ### Butterfly Weed (*Asclepias tuberosa*)
 
