@@ -42,8 +42,9 @@
 <nav class="site"><a href="index.html">Home</a><a href="table.html">Species table</a><a href="calendar.html">Bloom calendar</a><a href="habitat.html">Habitat record</a><a href="species.md">species.md</a></nav>
 <p class="lede">Plan view from above — <b>north is up</b>, the <b>road edge is at the left</b> and the slope rises to
 the <b>toe (top of the slope) at the right</b>. The fall line runs left&ndash;right and is stopped at each 12&Prime; grass
-contour band (the green columns). Planting beds are the columns between the bands, sized by measured bed area and
-colored by flower color, with species stacked north&#8209;to&#8209;south; hover or tap for the species. Source:
+contour band (the green columns). Planting beds are the columns between the bands, drawn at measured bed width (the
+strips are roughly uniform ~2.5&nbsp;ft) and colored by flower color, with species stacked north&#8209;to&#8209;south
+in proportion to their area; hover or tap for the species. Source:
 <a href="gardenmap.md">gardenmap.md</a>.</p>
 <div class="frame"><svg id="svg" role="img" aria-label="Schematic planting map of the west slope, north up, road at left and toe at right"></svg></div>
 <div class="legend" id="legend"></div>
@@ -82,9 +83,9 @@ function draw(species,blocks){
 
   const panels=[
     {half:'North', len:45, sub:'butterfly · ~335 ft² beds · 6–9 ft deep', zone:'🦋 butterfly territory',
-     cols:[{grass:'road'},{bed:'front'},{grass:'mid'},{bed:'back'},{grass:'toe'}]},
+     cols:[{grass:'road'},{bed:'front',wft:2.5},{grass:'mid'},{bed:'back',wft:4.5},{grass:'toe'}]},
     {half:'South', len:40, sub:'nectar · ~353 ft² beds · 8–13 ft deep · 4 beds', zone:'🌳 walnut / juglone corner',
-     cols:[{grass:'road'},{bed:'front'},{grass:'',w:14},{bed:'midlow'},{grass:'mid'},{bed:'midhigh'},{grass:'',w:14},{bed:'back'},{grass:'toe'}]},
+     cols:[{grass:'road'},{bed:'front',wft:2.2},{grass:'',w:14},{bed:'midlow',wft:2.5},{grass:'mid'},{bed:'midhigh',wft:2.2},{grass:'',w:14},{bed:'back',wft:2.85},{grass:'toe'}]},
   ];
 
   // juglone hatch
@@ -100,8 +101,7 @@ function draw(species,blocks){
     // bed depths (road->toe) so both halves fill the same overall width
     const bedDepth={}; let totDepth=0, gTot=0;
     panel.cols.forEach(c=>{ if(c.grass!==undefined){gTot+=(c.w||GBpx);return;}
-      const a=blocks.filter(k=>k.half===panel.half&&k.bed===c.bed).reduce((s,k)=>s+k.area,0);
-      bedDepth[c.bed]=a/panel.len; totDepth+=bedDepth[c.bed]; });
+      bedDepth[c.bed]=c.wft; totDepth+=bedDepth[c.bed]; });
     const bedsW=CONTENTW-gTot;
     let x=x0;
 
