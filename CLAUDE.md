@@ -187,6 +187,6 @@ orientation. Do not invent a different axis (e.g. road-on-the-right, compass-rot
   full slope length, across the fall line). Beds are two-letter codes; always include the
   code legend (G, BW, GA, SA, MT, MW, WY, WC, SB, BS, BE, NA; `bb` = spared bee-balm/bergamot
   clump). (PB / purple bee balm retired from the sown map 2026-07-23 — kept only as `bb`.)
-- The interactive `map.html` should render this **same** orientation. It is currently
-  drawn 90° rotated from the template (fall line vertical, road at top) — that is the
-  known map bug to fix.
+- The interactive `map.html` renders this **same** orientation (road left, toe right,
+  north up, fall line horizontal) and the measured 4-bed as-built south (BE as its own
+  bed), driven by `data/layout.csv` — kept in sync with this template.

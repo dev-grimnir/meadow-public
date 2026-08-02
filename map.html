@@ -81,10 +81,10 @@ function draw(species,blocks){
   const x0=70, y0=64;      // left / top offset
 
   const panels=[
-    {half:'North', len:45, sub:'butterfly · ~326  ft² · 6–9 ft deep', zone:'🦋 butterfly territory',
+    {half:'North', len:45, sub:'butterfly · ~335 ft² beds · 6–9 ft deep', zone:'🦋 butterfly territory',
      cols:[{grass:'road'},{bed:'front'},{grass:'mid'},{bed:'back'},{grass:'toe'}]},
-    {half:'South', len:38, sub:'nectar · ~410 ft² · 8–13 ft deep', zone:'🌳 walnut / juglone corner',
-     cols:[{grass:'road'},{bed:'front'},{bed:'mid'},{grass:'mid'},{bed:'back'},{grass:'toe'}]},
+    {half:'South', len:40, sub:'nectar · ~353 ft² beds · 8–13 ft deep · 4 beds', zone:'🌳 walnut / juglone corner',
+     cols:[{grass:'road'},{bed:'front'},{grass:'',w:14},{bed:'midlow'},{grass:'mid'},{bed:'midhigh'},{grass:'',w:14},{bed:'back'},{grass:'toe'}]},
   ];
 
   // juglone hatch
@@ -98,21 +98,23 @@ function draw(species,blocks){
   panels.forEach(panel=>{
     const panelH=panel.len*FTY, panelTop=y;
     // bed depths (road->toe) so both halves fill the same overall width
-    const bedDepth={}; let totDepth=0, nG=0;
-    panel.cols.forEach(c=>{ if(c.grass!==undefined){nG++;return;}
+    const bedDepth={}; let totDepth=0, gTot=0;
+    panel.cols.forEach(c=>{ if(c.grass!==undefined){gTot+=(c.w||GBpx);return;}
       const a=blocks.filter(k=>k.half===panel.half&&k.bed===c.bed).reduce((s,k)=>s+k.area,0);
       bedDepth[c.bed]=a/panel.len; totDepth+=bedDepth[c.bed]; });
-    const bedsW=CONTENTW-nG*GBpx;
+    const bedsW=CONTENTW-gTot;
     let x=x0;
 
     panel.cols.forEach(col=>{
       if(col.grass!==undefined){
-        const w=GBpx;
+        const w=col.w||GBpx;
         el('rect',{x:x,y:y,width:w,height:panelH,rx:3,class:'grass'});
-        const cx=x+w/2, cy=y+panelH/2;
-        const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',
-          transform:'rotate(-90 '+cx+' '+cy+')'});
-        gl.textContent=col.grass+' band';
+        if(col.grass){
+          const cx=x+w/2, cy=y+panelH/2;
+          const gl=el('text',{x:cx,y:cy,'text-anchor':'middle',class:'grass-label',
+            transform:'rotate(-90 '+cx+' '+cy+')'});
+          gl.textContent=col.grass+' band';
+        }
         x+=w;
       } else {
         const list=blocks.filter(k=>k.half===panel.half&&k.bed===col.bed).sort((p,q)=>p.order-q.order);
