@@ -243,6 +243,21 @@ one-page habitat & compliance summary is the
 - **Wildlife:** High
 - **Sow rate:** 10–12/ft² (18–24" clump)
 
+### Spicebush (*Lindera benzoin*)
+
+![Spicebush](images/spicebush.jpg)
+
+- **Native:** Yes
+- **Root:** Shrub
+- **Bloom:** Apr (yellow)
+- **Height:** 6–10 ft (shrub)
+- **Light:** Part shade–shade
+- **Soil:** Moist, well-drained
+- **Juglone:** Tolerant
+- **Wildlife:** High
+- **Sow rate:** — (nursery stock; not sown by area)
+- **Host:** Spicebush swallowtail
+
 ### White Yarrow (*Achillea millefolium* ssp. *millefolium*)
 
 ![White Yarrow](images/white-yarrow.jpg)

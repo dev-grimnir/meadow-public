@@ -248,6 +248,10 @@ tidier; straight-species variety. **3 packets** (Prairie Moon packs ~150 seeds e
 clumper, sow spaced (~450 seeds over the ~65 ft² bed), press in, don't bury. Missed on the
 first order — bought separately.
 
+### Spicebush — Future candidate (2028+)
+East edge / north edge woodland candidate. Plant from nursery stock (not seed).
+Schedule 2028 or later (post-survey).
+
 ### Mountain Laurel — Seed + medium ordered for 2027 start
 Seed project underway (Sheffield's Seed Company or F.W. Schumacher Co.). Sow fall
 2026, grow 3–5 years in pots, landscape 2030–2031. Requires ericoid mycorrhizal
